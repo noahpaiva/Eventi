@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Eventi - Plan it! </title>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <h1> Eventi </h1>
+        <h2> Your Event Planner </h2>
+
+        <div id="formContainer">
+
+            <div id="header"></div>
+
+            <input type="email" placeholder="Email" id="email"/>
+            <input type="password" placeholder="Password" id="password"/>
+
+            <button onclick="signUp()" id="signUp"> Sign Up </button>
+            <button onclick="signIn()" id="signIn"> Sign In </button>
+            <button onclick="signOut()" id="signOut"> Sign Out </button>
+        </div>
+
+    </body>
+</html>
