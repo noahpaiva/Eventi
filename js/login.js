@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const auth = firebase.auth();
+var loggedIn = false;
 
 function signUp() {
 
@@ -32,14 +33,43 @@ function signIn() {
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
-
-    alert("Signed In " + email.value);
-
+    
 }
 
 function signOut() {
+
+    if(window.location = "dash.html")
+    {
+        window.location = "index.html";
+    }
 
     auth.signOut();
     alert("Signed Out");
 
 }
+
+function goToDash() {
+
+    if (loggedIn) {
+        window.location="dash.html";
+    }
+
+}
+auth.onAuthStateChanged(function(user) {
+
+    if (user) {
+
+        //is signed in
+        var checkEmail = user.email
+        alert("Active User: " + checkEmail);
+        loggedIn = true;
+
+    }
+    else {
+
+        //no user is signed in
+        alert("No Active User");
+        loggedIn = false;
+
+    }
+})
