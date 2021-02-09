@@ -28,8 +28,17 @@ function signIn() {
     var email = document.getElementById("email");
     var password = document.getElementById("password");
 
-    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => alert(e.message));
+    const promise = auth.signInWithEmailAndPassword(email.value, password.value).
+        catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if(errorCode === 'auth/wrong-password') {
+                alert('Wrong Password.');
+            }
+            else {
+                alert(errorMessage);
+            }
+        })
 
 }
 
@@ -42,7 +51,7 @@ function signUserOut() {
 
 function goToDash() {
 
-    if (loggedIn) {
+    if (activeUser != null) {
         window.location="dash.html";
     }
 
@@ -57,6 +66,6 @@ auth.onAuthStateChanged(function(user) {
     }else{
 
         alert("No Active User");
-        
+
     }
 })
