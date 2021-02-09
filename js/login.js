@@ -33,6 +33,9 @@ function signIn() {
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
+
+    goToDash();
+
     
 }
 
@@ -42,7 +45,7 @@ function signOut() {
     {
         window.location = "index.html";
     }
-
+    loggedIn = false;
     auth.signOut();
     alert("Signed Out");
 
