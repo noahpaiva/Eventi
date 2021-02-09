@@ -12,7 +12,6 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const auth = firebase.auth();
-var loggedIn = false;
 
 function signUp() {
 
@@ -21,8 +20,6 @@ function signUp() {
 
     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
-
-    alert("Signed Up");
 
 }
 
@@ -34,18 +31,10 @@ function signIn() {
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
 
-    goToDash();
-
-    
 }
 
-function signOut() {
+function signUserOut() {
 
-    if(window.location = "dash.html")
-    {
-        window.location = "index.html";
-    }
-    loggedIn = false;
     auth.signOut();
     alert("Signed Out");
 
@@ -60,19 +49,14 @@ function goToDash() {
 }
 auth.onAuthStateChanged(function(user) {
 
-    if (user) {
+    if(user) {
 
-        //is signed in
-        var checkEmail = user.email
-        alert("Active User: " + checkEmail);
-        loggedIn = true;
+        var email = user.email;
+        alert("Active User: " + email);
 
-    }
-    else {
+    }else{
 
-        //no user is signed in
         alert("No Active User");
-        loggedIn = false;
-
+        
     }
 })
