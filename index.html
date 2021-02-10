@@ -1,30 +1,158 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="css/main.css">
-        <title> Eventi - Plan it! </title>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
-
-
-        <script src="js/login.js"></script>
-    </head>
-    <body>
-        <h1> Eventi </h1>
-        <h2> Your Event Planner </h2>
-
-        <div id="formContainer">
-
-            <div id="header"></div>
-
-            <input type="email" placeholder="Email" id="email"/>
-            <input type="password" placeholder="Password" id="password"/>
-
-            <button onclick="signUp()" id="signUp"> Sign Up </button>
-            <button onclick="signIn()" id="signIn"> Sign In </button>
-            <button onclick="signUserOut()" id="signOut"> Sign Out </button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Eventi - Plan it!</title>
+</head>
+<body class="grey lighten-3">
+    
+    <!--Nav bar pepesmile-->
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <img src="img/pepehands1.png" style="width: 50px; margin-top: 10px;">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="logged-in">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="grey-text" data-target="logout">Logout</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Event</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-    </body>
+    <!-- Sign Up modal-->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign up</h4><br />
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" requried />
+                    <label for="signup-password">Choose password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal-->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br />
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" requried />
+                    <label for="login-password">Your password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Account Modal-->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account Details</h4><br />
+            <div class="account-details"></div>
+        </div>
+    </div>
+
+    <!-- Create Event Modal-->
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Create New Event</h4><br />
+            <form id="create-form">
+                <div class="input-field">
+                    <input type="text" id="title" requried>
+                    <label for="title">Event Title</label>
+                </div>
+                <div class="input-field">
+                    <textarea if="content" class="materialize-textarea" required></textarea>
+                    <label for="content">Event Description</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event List-->
+    <div class="container" stlye="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 events" style="border: none;">
+            <li>
+                <div class="collapsible-header grey lighten-4">Event Title</div>
+                <div class="collapsible-body white">Event Desc</div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Event Title</div>
+                <div class="collapsible-body white"><span>Event Desc</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Event Title</div>
+                <div class="collapsible-body white"><span>Event Desc</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Event Title</div>
+                <div class="collapsible-body white"><span>Event Desc</span></div>
+            </li>
+        </ul>
+    </div>
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAPLTMBWmsRhIGYZc7w6UfEMdRKtnoOLOY",
+            authDomain: "eventilogin.firebaseapp.com",
+            projectId: "eventilogin",
+            appId: "1:151926697410:web:7cd44669d6aa9becf37a5b",
+            measurementId: "G-LFX33NZ12L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings - not neccesary in newer versions of firestore
+        // db.settings({ timestampsInSnapshots: true});
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
 </html>
