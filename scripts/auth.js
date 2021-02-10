@@ -1,3 +1,8 @@
+// get data
+db.collection('events').get().then(snapshot => {
+    setupEvents(snapshot.docs);
+})
+
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
 
@@ -36,6 +41,7 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
+    window.location.reload();
 });
 
 

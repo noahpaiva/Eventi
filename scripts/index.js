@@ -1,3 +1,42 @@
+const eventList = document.querySelector('.events');
+
+var userEmail;
+auth.onAuthStateChanged(user => {
+
+    if (user) {
+        userEmail = user.email;
+    }
+    else {
+
+    }
+
+});
+
+//setup events
+const setupEvents = (data) => {
+    let html = '';
+    data.forEach(doc => {
+        const event = doc.data();
+        console.log(event);
+        if(userEmail == event.admin) {
+            const li = `
+                <li>
+                    <div class="collapsible-header grey lighten-4">${event.Title}</div>
+                    <div class="collapsible-body white">
+                        ${event.Desc} <br />
+                        ${event.Date} <br />
+                        ${event.Location} <br />
+                    </div>
+                </li>
+            `;
+            html += li;
+        }
+    });
+
+    eventList.innerHTML = html;
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
     var modals = document.querySelectorAll('.modal');
