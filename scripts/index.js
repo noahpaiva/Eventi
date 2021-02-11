@@ -1,3 +1,12 @@
+  if("serviceWorker" in navigator){
+        navigator.serviceWorker.register(sw.js).then(registration => {
+            console.log("SW Registered!");
+            console.log(registration);
+    }.catch(error){
+            console.log("SW Registration failed!");
+            console.log(error);
+        } 
+
 const eventList = document.querySelector('.events');
 
 var userEmail;
@@ -48,13 +57,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var items = document.querySelectorAll('.collapsible');
     M.Collapsible.init(items);
     
-    /* if("serviceWorker" in navigator){
-        navigator.serviceWorker.register(sw.js).then(registration => {
-            console.log("SW Registered!");
-            console.log(registration);
-    }.catch(error){
-            console.log("SW Registration failed!");
-            console.log(error);
-        } */
-    
+  
 })
