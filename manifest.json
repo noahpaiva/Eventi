@@ -3,8 +3,6 @@
 "short_name": "Eventi",
 "start_url": ".",
 "background_color": "#3792cb",
-"theme_color": #1c4966",
- "display": "standalone",
- "icons":[
-  ]
+"theme_color": "#1c4966",
+"display": "standalone"
 }
