@@ -91,21 +91,23 @@
             <h4>Create New Event</h4><br />
             <form id="create-form">
                 <div class="input-field">
-                    <input type="text" id="title" requried>
+                    <input type="text" id="Title" requried>
                     <label for="title">Event Title</label>
                 </div>
                 <div class="input-field">
-                    <textarea if="content" class="materialize-textarea" required></textarea>
+                    <textarea id="Desc" class="materialize-textarea" required></textarea>
                     <label for="content">Event Description</label>
                 </div>
                 <div class="input-field">
-                    <textarea if="content" class="materialize-textarea" required></textarea>
-                    <label for="content">Event Date</label>
-                </div>
-                <div class="input-field">
-                    <textarea if="content" class="materialize-textarea" required></textarea>
+                    <textarea id="Location" class="materialize-textarea" required></textarea>
                     <label for="content">Event Location</label>
                 </div>
+                <div class="input-field">
+                    <!-- <textarea if="content" class="materialize-textarea" required></textarea>
+                    <label for="content">Event Date</label> -->
+                    <input type="datetime-local" id="Date" name="eventTime">
+                </div>
+                
                 <button class="btn yellow darken-2 z-depth-0">Create</button>
             </form>
         </div>
