@@ -15,6 +15,25 @@ if("serviceWorker" in navigator){
 
 const eventList = document.querySelector('.events');
 
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+const loggedInLinks = document.querySelectorAll('.logged-in');
+
+const setupUI = (user) => {
+    
+    if(user) {
+
+        // Toggle nav bar elements
+        loggedInLinks.forEach(item => item.style.display = 'block');
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+    }
+    else {
+
+        // Toggle nav bar elements
+        loggedInLinks.forEach(item => item.style.display = 'none');
+        loggedOutLinks.forEach(item => item.style.display = 'block');
+    }
+}
+
 var userEmail;
 auth.onAuthStateChanged(user => {
 
@@ -29,29 +48,38 @@ auth.onAuthStateChanged(user => {
 
 //setup events
 const setupEvents = (data) => {
-    let html = '';
-    data.forEach(doc => {
-        const event = doc.data();
-        console.log(event);
-        if(userEmail == event.admin) {
-            var thisDate = event.Date.toDate();
-            var loc = event.Location.replace(/\s/g, '+');
-            loc.replace(/,/g, '%2C');
-            const li = `
-                <li>
-                    <div class="collapsible-header grey lighten-4">${event.Title}</div>
-                    <div class="collapsible-body white">
-                        ${event.Desc} <br />
-                        ${thisDate} <br />
-                        <a href="https://www.google.com/maps/search/?api=1&query=${loc}">${event.Location}</a> <br />
-                    </div>
-                </li>
-            `;
-            html += li;
-        }
-    });
 
-    eventList.innerHTML = html;
+    if(data.length) {
+        let html = '';
+        data.forEach(doc => {
+            const event = doc.data();
+            // console.log(event); - only used for debugging
+            if(userEmail == event.admin) {
+                var thisDate = event.Date.toDate();
+                var loc = event.Location.replace(/\s/g, '+');
+                loc.replace(/,/g, '%2C');
+                const li = `
+                    <li>
+                        <div class="collapsible-header grey lighten-4">${event.Title}</div>
+                        <div class="collapsible-body white">
+                            ${event.Desc} <br />
+                            ${thisDate} <br />
+                            <a href="https://www.google.com/maps/search/?api=1&query=${loc}">${event.Location}</a> <br />
+                        </div>
+                    </li>
+                `;
+                html += li;
+            }
+        });
+        eventList.innerHTML = html;
+    }
+    else {
+        eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>'
+    }
+
+    
+
+    
 }
 
 

@@ -1,16 +1,21 @@
-// get data
-db.collection('events').get().then(snapshot => {
-    setupEvents(snapshot.docs);
-})
+
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
 
     if (user) {
+
         console.log('user logged in: ', user);
+        // get data
+        db.collection('events').get().then(snapshot => {
+            setupEvents(snapshot.docs);
+            setupUI(user);
+        });
     }
     else {
         console.log('user logged out');
+        setupUI();
+        setupEvents([]);
     }
 
 });
@@ -41,7 +46,6 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
-    window.location.reload();
 });
 
 
