@@ -20,18 +20,25 @@ const eventList = document.querySelector('.events');
 // Finds which nav bar items should be shown to the user depending on log in status
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
+const accountDetails = document.querySelector('.account-details');
 
 
 // Changes nav bar buttons depending on log in status
 const setupUI = (user) => {
     
     if(user) {
-
+        // Show Account info
+        const html = `
+        <div>Logged in as ${user.email}</div>
+        `
+        accountDetails.innerHTML = html;
         // Toggle nav bar elements
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display = 'none');
     }
     else {
+        // Hide account info
+        accountDetails.innerHTML - '';
 
         // Toggle nav bar elements
         loggedInLinks.forEach(item => item.style.display = 'none');
@@ -68,8 +75,8 @@ const setupEvents = (data) => {
                 loc.replace(/,/g, '%2C');
                 const li = `
                     <li>
-                        <div class="collapsible-header grey lighten-4">${event.Title}</div>
-                        <div class="collapsible-body white">
+                        <div class="collapsible-header grey lighten-3">${event.Title}</div>
+                        <div class="collapsible-body light grey lighten-5">
                             ${event.Desc} <br />
                             ${thisDate} <br />
                             <a href="https://www.google.com/maps/search/?api=1&query=${loc}">${event.Location}</a> <br />
