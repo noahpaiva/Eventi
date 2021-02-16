@@ -1,20 +1,51 @@
-// get data
-db.collection('events').get().then(snapshot => {
-    setupEvents(snapshot.docs);
-})
+
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
 
     if (user) {
+
         console.log('user logged in: ', user);
+        // get data
+        db.collection('events').onSnapshot(snapshot => {
+            setupEvents(snapshot.docs);
+            setupUI(user);
+        });
     }
     else {
         console.log('user logged out');
+        setupUI();
+        setupEvents([]);
     }
 
 });
 
+
+//Event Creation
+const createForm = document.querySelector('#create-form');
+createForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // var date = new Date(document.getElementById("Date").value);
+    // var timeStamp = date.getTime();
+    var eventDate = new Date(createForm['Date'].value);
+
+    db.collection('events').add({
+        Date: eventDate,
+        Desc: createForm['Desc'].value,
+        Location: createForm['Location'].value,
+        Title: createForm['Title'].value,
+        admin: userEmail
+    }).then(() => {
+        //Close and clear modal form
+        const modal = document.querySelector('#modal-create');
+        M.Modal.getInstance(modal).close();
+        createForm.reset();
+
+    }).catch(err => {
+        console.log(err.message);
+    })
+});
 
 
 
@@ -41,7 +72,6 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
-    window.location.reload();
 });
 
 
