@@ -13,11 +13,16 @@ if("serviceWorker" in navigator){
     });
 }
 
+
+// Pulls data from Firestore 'events' database
 const eventList = document.querySelector('.events');
 
+// Finds which nav bar items should be shown to the user depending on log in status
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 
+
+// Changes nav bar buttons depending on log in status
 const setupUI = (user) => {
     
     if(user) {
@@ -34,6 +39,8 @@ const setupUI = (user) => {
     }
 }
 
+
+// Sets userEmail variable for firebase searching and event setup
 var userEmail;
 auth.onAuthStateChanged(user => {
 
@@ -49,6 +56,7 @@ auth.onAuthStateChanged(user => {
 //setup events
 const setupEvents = (data) => {
 
+    // Checks if data exists for an event
     if(data.length) {
         let html = '';
         data.forEach(doc => {
@@ -83,6 +91,7 @@ const setupEvents = (data) => {
 }
 
 
+// Allows for events to be collapsible modals
 document.addEventListener('DOMContentLoaded', function() {
 
     var modals = document.querySelectorAll('.modal');
