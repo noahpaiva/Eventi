@@ -10,12 +10,17 @@ auth.onAuthStateChanged(user => {
         db.collection('events').onSnapshot(snapshot => {
             setupEvents(snapshot.docs);
             setupUI(user);
+        }, err => {
+            console.log(err.message)
         });
+
     }
     else {
+
         console.log('user logged out');
         setupUI();
         setupEvents([]);
+        
     }
 
 });
@@ -60,6 +65,10 @@ signupForm.addEventListener('submit', (e) => {
 
     // sign up user, asynchronous task, takes time to complete, requires promise to function correctly
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        return db.collection('users').doc(cred.user.uid).set({
+            bio: signupForm['signup-bio'].value
+        });
+    }).then(() => {
         const modal = document.querySelector('#modal-signup');
         M.Modal.getInstance(modal).close();
         signupForm.reset();

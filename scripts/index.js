@@ -1,8 +1,4 @@
-
-
-
-
-
+// Service worker implementation
 if("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("SW Registered!");
@@ -14,8 +10,11 @@ if("serviceWorker" in navigator){
 }
 
 
+
 // Pulls data from Firestore 'events' database
 const eventList = document.querySelector('.events');
+
+
 
 // Finds which nav bar items should be shown to the user depending on log in status
 const loggedOutLinks = document.querySelectorAll('.logged-out');
@@ -23,15 +22,19 @@ const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
 
 
+
 // Changes nav bar buttons depending on log in status
 const setupUI = (user) => {
     
     if(user) {
         // Show Account info
-        const html = `
-        <div>Logged in as ${user.email}</div>
-        `
-        accountDetails.innerHTML = html;
+        db.collection('users').doc(user.uid).get().then(doc => {
+            const html = `
+                <div>Logged in as ${user.email}</div>
+                <div>${doc.data().bio}</div>
+            `;
+            accountDetails.innerHTML = html;
+        })
         // Toggle nav bar elements
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display = 'none');
@@ -47,6 +50,7 @@ const setupUI = (user) => {
 }
 
 
+
 // Sets userEmail variable for firebase searching and event setup
 var userEmail;
 auth.onAuthStateChanged(user => {
@@ -60,6 +64,15 @@ auth.onAuthStateChanged(user => {
 
 });
 
+
+
+// Allows user to delete events, not confirmation is offered to user, might add in the future
+function deleteEvent(ev) {
+    db.collection('events').doc(ev).delete();
+}
+
+
+
 //setup events
 const setupEvents = (data) => {
 
@@ -68,18 +81,21 @@ const setupEvents = (data) => {
         let html = '';
         data.forEach(doc => {
             const event = doc.data();
+            let eventId = doc.id;
             // console.log(event); - only used for debugging
             if(userEmail == event.admin) {
                 var thisDate = event.Date.toDate();
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
-                const li = `
+                let li = `
                     <li>
-                        <div class="collapsible-header grey lighten-3">${event.Title}</div>
-                        <div class="collapsible-body light grey lighten-5">
+                        <div class="collapsible-header orange lighten-4">${event.Title}</div>
+                        <div class="collapsible-body light orange lighten-5">
                             ${event.Desc} <br />
                             ${thisDate} <br />
-                            <a href="https://www.google.com/maps/search/?api=1&query=${loc}">${event.Location}</a> <br />
+                            <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
+                            <br />
+                            <button class="btn grey darken-3 z-depth-0" onclick="deleteEvent('${eventId}')">Delete Event</button>
                         </div>
                     </li>
                 `;
@@ -89,12 +105,8 @@ const setupEvents = (data) => {
         eventList.innerHTML = html;
     }
     else {
-        eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>'
-    }
-
-    
-
-    
+        eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>';
+    }   
 }
 
 
