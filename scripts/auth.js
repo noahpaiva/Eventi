@@ -26,6 +26,8 @@ auth.onAuthStateChanged(user => {
 });
 
 
+
+
 //Event Creation
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
