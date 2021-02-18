@@ -105,7 +105,13 @@ const setupEvents = (data) => {
         eventList.innerHTML = html;
     }
     else {
-        eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>';
+        let html = '';
+        let li = `
+            <h5 class="center-align">Please login to view your events!</h5>
+            <h5 class="center-align">Second statement</h5>
+        `;
+        html += li;
+        eventList.innerHTML = html;
     }   
 }
 
