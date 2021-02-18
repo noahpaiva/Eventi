@@ -107,8 +107,9 @@ const setupEvents = (data) => {
     else {
         let html = '';
         let li = `
-            <h5 class="center-align">Please login to view your events!</h5>
-            <h5 class="center-align">Second statement</h5>
+            <h5 class="right-align">Welcome to Eventi! Meet the next generation of event planning and organization right here at the tips of your fingers.</h5>
+            <h5 class="left-align">Eventi was created by developers trying to solve the problem of unorganization and difficulty planning among different social groups of people. Most important categories of social life are covered in the Eventi planning application. Enjoy!</h5>
+            <h5 class="right-align">Please login or create an account to begin event planning!</h5>
         `;
         html += li;
         eventList.innerHTML = html;
