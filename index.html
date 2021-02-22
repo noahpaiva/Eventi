@@ -5,10 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel = "stylesheet" href="main.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
     <title>Eventi - Plan it!</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
+
+    <script>
+        var searchInput = 'search_input';
+
+        $(document).ready(function() {
+            var autocomplete;
+            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+                types: ['geocode']
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                var near_place = autocomplete.getPlace();
+                document.getElementById('latitude_input').value = near_place.geometry.location.lat();
+                document.getElementById('longitude_input').value = near_place.geometry.location.lng();
+
+                document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+                document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+            });
+        });
+
+        $(document).on('change', '#'+searchInput, function() {
+            document.getElementById('latitude_input').value = '';
+            document.getElementById('longitude_input').value = '';
+            document.getElementById('latitude_view').innerHTML = '';
+            document.getElementById('longitude_view').innerHTML = '';
+        });
+    </script>
+    <style>
+        .pac-container {
+            z-index: 10000 !important;
+        }
+    </style>
 
 </head>
 <body class="grey darken-3">
@@ -106,14 +140,21 @@
                     <textarea id="Desc" class="materialize-textarea" required></textarea>
                     <label for="content">Event Description</label>
                 </div>
-                <div class="input-field">
+                <!-- <div class="input-field">
                     <textarea id="Location" class="materialize-textarea" required></textarea>
                     <label for="content">Event Location</label>
-                    <!-- <input id="autocomplete" placeholder="Enter a place" type="text" /> -->
+                </div> -->
+                <div class="input-field">
+                    <label>Location:</label>
+                    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
+                    <input type="hidden" id="latitude_input" />
+                    <input type="hidden" id="longitude_input" />
+                </div>
+                <div class="latlong-view">
+                    <p hidden><b>Latitude:</b> <span id="latitude_view"></span></p>
+                    <p hidden><b>Longitude:</b> <span id="longitude_view"></span></p>
                 </div>
                 <div class="input-field">
-                    <!-- <textarea if="content" class="materialize-textarea" required></textarea>
-                    <label for="content">Event Date</label> -->
                     <input type="datetime-local" id="Date" name="eventTime">
                 </div>
                 

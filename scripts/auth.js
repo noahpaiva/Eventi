@@ -40,7 +40,7 @@ createForm.addEventListener('submit', (e) => {
     db.collection('events').add({
         Date: eventDate,
         Desc: createForm['Desc'].value,
-        Location: createForm['Location'].value,
+        Location: createForm['search_input'].value,
         Title: createForm['Title'].value,
         admin: userEmail
     }).then(() => {
