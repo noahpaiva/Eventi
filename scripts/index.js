@@ -89,7 +89,7 @@ const setupEvents = (data) => {
                 loc.replace(/,/g, '%2C');
                 let li = `
                     <li>
-                        <div class="collapsible-header orange lighten-4">${event.Title}</div>
+                        <div class="collapsible-header orange lighten-4"><strong>${event.Title}</strong></div>
                         <div class="collapsible-body light orange lighten-5">
                             ${event.Desc} <br />
                             ${thisDate} <br />
@@ -121,11 +121,11 @@ const setupEvents = (data) => {
                 </div>
             
                 <div class="item">
-                <img src="event2.jpg" alt="Your next event has never been this easy!">
+                <img src="img/event2.jpg" alt="Your next event has never been this easy!">
                 </div>
             
                 <div class="item">
-                <img src="event3.jpg" alt="Enjoy an adventure or a relaxing day, it's all up to you!">
+                <img src="img/event3.jpg" alt="Enjoy an adventure or a relaxing day, it's all up to you!">
                 </div>
             </div>
             
