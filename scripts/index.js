@@ -117,7 +117,7 @@ const setupEvents = (data) => {
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                <img src="event.jpg" alt="Plan extravagant events with Eventi!">
+                <img src="img/event.jpg" alt="Plan extravagant events with Eventi!">
                 </div>
             
                 <div class="item">
