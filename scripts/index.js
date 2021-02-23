@@ -89,7 +89,7 @@ const setupEvents = (data) => {
                 loc.replace(/,/g, '%2C');
                 let li = `
                     <li>
-                        <div class="collapsible-header orange lighten-4">${event.Title}</div>
+                        <div class="collapsible-header orange lighten-4"><strong>${event.Title}</strong></div>
                         <div class="collapsible-body light orange lighten-5">
                             ${event.Desc} <br />
                             ${thisDate} <br />
