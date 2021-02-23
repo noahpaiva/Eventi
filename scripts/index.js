@@ -88,7 +88,23 @@ const setupEvents = (data) => {
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
                 let li = `
-                    <li><div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="collapsible-header orange lighten-4">${event.Title}</div>
+                        <div class="collapsible-body light orange lighten-5">
+                            ${event.Desc} <br />
+                            ${thisDate} <br />
+                            <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
+                            <br />
+                            <button class="btn grey darken-3 z-depth-0" onclick="deleteEvent('${eventId}')">Delete Event</button>
+                        </div>
+                    </li>
+                `;
+                html += li;
+            }
+        });
+        eventList.innerHTML = html;
+    }
+    else {
+        <li><div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -121,23 +137,8 @@ const setupEvents = (data) => {
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                        <div class="collapsible-header orange lighten-4">${event.Title}</div>
-                        <div class="collapsible-body light orange lighten-5">
-                            ${event.Desc} <br />
-                            ${thisDate} <br />
-                            <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
-                            <br />
-                            <button class="btn grey darken-3 z-depth-0" onclick="deleteEvent('${eventId}')">Delete Event</button>
-                        </div>
-                    </li>
-                `;
-                html += li;
-            }
-        });
-        eventList.innerHTML = html;
-    }
-    else {
         eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>';
+        
     }   
 }
 
