@@ -88,6 +88,10 @@ const setupEvents = (data) => {
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
                 let li = `
+<<<<<<< Updated upstream
+=======
+                    <li>
+>>>>>>> Stashed changes
                         <div class="collapsible-header orange lighten-4">${event.Title}</div>
                         <div class="collapsible-body light orange lighten-5">
                             ${event.Desc} <br />
@@ -104,6 +108,7 @@ const setupEvents = (data) => {
         eventList.innerHTML = html;
     }
     else {
+<<<<<<< Updated upstream
         <li><div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -137,6 +142,8 @@ const setupEvents = (data) => {
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
+=======
+>>>>>>> Stashed changes
         eventList.innerHTML = '<h5 class="center-align">Please login to view your events!</h5>';
         
     }   
