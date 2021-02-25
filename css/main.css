@@ -1,0 +1,8 @@
+#nav-mobile {
+    float: right;
+    display: flex;
+}
+
+#nav-item a{
+    font-size: 20px;
+}
