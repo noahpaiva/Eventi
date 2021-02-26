@@ -89,8 +89,8 @@ const setupEvents = (data) => {
                 loc.replace(/,/g, '%2C');
                 let li = `
                     <li>
-                        <div class="collapsible-header orange lighten-4"><strong>${event.Title}</strong></div>
-                        <div class="collapsible-body light orange lighten-5">
+                        <div class="collapsible-header orange lighten-4"><strong id="event-title">${event.Title}</strong></div>
+                        <div class="collapsible-body light orange lighten-5" id="event-content">
                             ${event.Desc} <br />
                             ${thisDate} <br />
                             <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />

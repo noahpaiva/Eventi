@@ -1,8 +1,65 @@
+
+/* ----- Nav Bar CSS ----- */
 #nav-mobile {
   float: right;
   display: flex;
 }
 
 #nav-item a {
-  /* font-size: 20px; */
+  font-family: 'Source Code Pro', monospace;
 }
+/* ----- End Nav Bar ----- */
+
+
+
+/* ----- Sign Up Modal CSS ----- */
+#modal-signup {
+  background-color: #ffedd1;
+}
+
+#modal-signup div h4 {
+  font-family: 'Source Code Pro', monospace;
+}
+
+#modal-signup div form div label {
+  font-family: 'Roboto', sans-serif;
+}
+/* ----- End Sign Up Modal ----- */
+
+
+
+/* ----- Login Modal CSS ----- */
+#modal-login {
+  background-color: #ffedd1;
+}
+/* ----- End Login Modal ----- */
+
+
+
+
+/* ----- Account Info Modal CSS ----- */
+#modal-account {
+  background-color: #ffedd1;
+}
+/* ----- End Account Modal Info ----- */
+
+
+
+
+/* ----- Create Event Modal CSS ----- */
+#modal-create {
+  background-color: #ffedd1;
+}
+/* ----- End Create Event Modal ----- */
+
+
+
+/* ----- Event Content CSS ----- */
+#event-title {
+  font-family: 'Source Code Pro', monospace;
+}
+
+#event-content {
+  font-family: 'Roboto', sans-serif;
+}
+/* ----- End Event Content ----- */
