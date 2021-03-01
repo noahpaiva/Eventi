@@ -32,6 +32,7 @@ const setupUI = (user) => {
             const html = `
                 <div>Logged in as ${user.email}</div>
                 <div>${doc.data().bio}</div>
+                <div>Email Verified: ${user.emailVerified}</div>
             `;
             accountDetails.innerHTML = html;
         })
@@ -53,10 +54,12 @@ const setupUI = (user) => {
 
 // Sets userEmail variable for firebase searching and event setup
 var userEmail;
+var userVerif;
 auth.onAuthStateChanged(user => {
 
     if (user) {
         userEmail = user.email;
+        userVerif = user.emailVerified;
     }
     else {
 
@@ -69,6 +72,23 @@ auth.onAuthStateChanged(user => {
 // Allows user to delete events, not confirmation is offered to user, might add in the future
 function deleteEvent(ev) {
     db.collection('events').doc(ev).delete();
+}
+
+
+// Sends user a verification email upon button press
+function send_verification() {
+    var user = firebase.auth().currentUser;
+
+    user.sendEmailVerification().then(function() {
+        // Email sent
+
+        window.alert("verification Sent!");
+
+    }).catch(function(error) {
+        // An error has occured
+
+        window.alert("Error: " + error.message);
+    });
 }
 
 
@@ -87,6 +107,8 @@ const setupEvents = (data) => {
                 var thisDate = event.Date.toDate();
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
+
+                // BUILDING USER EVENTS INTO HTML
                 let li = `
                     <li>
                         <div class="collapsible-header orange lighten-4"><strong id="event-title">${event.Title}</strong></div>
@@ -99,11 +121,25 @@ const setupEvents = (data) => {
                         </div>
                     </li>
                 `;
+                
                 html += li;
+                
             }
         });
+
+        // IF USER EMAIL IS NOT VERIFIED, SHOW BUTTON TO SEND VERIFICATION EMAIL
+        if(!userVerif) {
+            let emailButton = `
+                <div>
+                    <button class="btn grey darken-3 z-depth-0" id="verifButton" onclick="send_verification()">Verify Email</button>
+                </div>
+            `;
+        html += emailButton;
+        }
+        
         eventList.innerHTML = html;
     }
+    // IF NO USER IS LOGGED IN
     else {
         let li = `
         <h5>Please log in to view your events.</h5>
