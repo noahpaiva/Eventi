@@ -12,32 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
 
-    <script>
-        var searchInput = 'search_input';
-
-        $(document).ready(function() {
-            var autocomplete;
-            autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-                // types: ['establishment']
-            });
-
-            google.maps.event.addListener(autocomplete, 'place_changed', function () {
-                var near_place = autocomplete.getPlace();
-                document.getElementById('latitude_input').value = near_place.geometry.location.lat();
-                document.getElementById('longitude_input').value = near_place.geometry.location.lng();
-
-                document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
-                document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
-            });
-        });
-
-        $(document).on('change', '#'+searchInput, function() {
-            document.getElementById('latitude_input').value = '';
-            document.getElementById('longitude_input').value = '';
-            document.getElementById('latitude_view').innerHTML = '';
-            document.getElementById('longitude_view').innerHTML = '';
-        });
-    </script>
+    
     <style>
         .pac-container {
             z-index: 10000 !important;
@@ -163,11 +138,46 @@
         </div>
     </div>
 
-    <br />
+    <!-- Edit Event Modal-->
+    <div id="modal-edit" class="modal">
+        <div class="modal-content">
+            <h4>Edit Event</h4><br />
+            <form id="edit-form">
+                <div class="input-field">
+                    <input type="text" id="edit-Title" requried>
+                    <label for="title">Event Title</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="edit-Desc" class="materialize-textarea" required></textarea>
+                    <label for="content">Event Description</label>
+                </div>
+                <!-- <div class="input-field">
+                    <textarea id="Location" class="materialize-textarea" required></textarea>
+                    <label for="content">Event Location</label>
+                </div> -->
+                <div class="input-field">
+                    <label>Location:</label>
+                    <input type="text" class="form-control" id="edit_search_input" placeholder="Type address..." />
+                    <input type="hidden" id="edit_latitude_input" />
+                    <input type="hidden" id="edit_longitude_input" />
+                </div>
+                <div class="latlong-view">
+                    <p hidden><b>Latitude:</b> <span id="edit_latitude_view"></span></p>
+                    <p hidden><b>Longitude:</b> <span id="edit_longitude_view"></span></p>
+                </div>
+                <div class="input-field">
+                    <input type="datetime-local" id="edit-Date" name="eventTime">
+                </div>
+                
+                <button class="btn grey darken-3 z-depth-0">Create</button>
+            </form>
+        </div>
+    </div>
+
     <br />
 
     <!-- Event List-->
-    <div class="container" stlye="margin-top: 40px;">
+    <div class="container" id="event-container">
         <ul class="collapsible z-depth-0 events" style="border: none;">
         </ul>
     </div>
@@ -208,5 +218,7 @@
     
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/placesSearch.js"></script>
+    <!-- <script src="scripts/editSearch.js"></script> -->
 </body>
 </html>

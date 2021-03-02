@@ -55,6 +55,14 @@ createForm.addEventListener('submit', (e) => {
 });
 
 
+// edit events
+// const editForm = document.querySelector('#edit-form');
+// editForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     updateEvent
+// });
+
 
 // signup
 const signupForm = document.querySelector('#signup-form');

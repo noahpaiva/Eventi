@@ -65,6 +65,11 @@
 }
 /* ----- End Create Event Modal ----- */
 
+/* ----- HTML Event Container -----*/
+#event-container {
+  margin-top: 40px;
+}
+
 /* ----- Event Content CSS ----- */
 #event-title {
   font-family: "Source Code Pro", monospace;

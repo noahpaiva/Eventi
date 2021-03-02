@@ -69,10 +69,31 @@ auth.onAuthStateChanged(user => {
 
 
 
-// Allows user to delete events, not confirmation is offered to user, might add in the future
+// Allows user to delete events, no confirmation is offered to user, might add in the future
 function deleteEvent(ev) {
     db.collection('events').doc(ev).delete();
+    window.alert("Event successfully deleted.")
 }
+
+
+
+// Allows users to edit (update) events
+function updateEvent(ev) {
+    var updateEV = db.collection('events').doc(ev);
+
+    updateEV.get().then((doc) => {
+        if (doc.exists) {
+            document.getElementById("edit-Title").value = updateEV.Title;
+            document.getElementById("edit-Desc").value = updateEV.Desc;
+        }
+        else {
+            console.log("No such document");
+        }
+    }).catch((error) => {
+        console.log("Error getting document: ", error);
+    })
+}
+
 
 
 // Sends user a verification email upon button press
@@ -118,6 +139,7 @@ const setupEvents = (data) => {
                             <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
                             <br />
                             <button class="btn grey darken-3 z-depth-0" onclick="deleteEvent('${eventId}')">Delete Event</button>
+                            <button class="btn grey darken-3 z-depth-0 modal-trigger" href="#" data-target="modal-edit" onclick="updateEvent('${eventId}')">Edit Event</button>
                         </div>
                     </li>
                 `;
