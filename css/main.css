@@ -79,3 +79,17 @@
   font-family: "Roboto", sans-serif;
 }
 /* ----- End Event Content ----- */
+
+/* ----- Edit Event Modal CSS ----- */
+#modal-edit {
+  background-color: #ffedd1;
+}
+
+#modal-edit div h4 {
+  font-family: "Source Code Pro", monospace;
+}
+
+#modal-edit div form div label {
+  font-family: "Roboto", sans-serif;
+}
+/* ----- End Edit Event Modal ----- */

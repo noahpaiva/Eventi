@@ -75,24 +75,63 @@ function deleteEvent(ev) {
     window.alert("Event successfully deleted.")
 }
 
+var currentEventID;
 
 
-// Allows users to edit (update) events
-function updateEvent(ev) {
-    var updateEV = db.collection('events').doc(ev);
+// Sets contents of edit event modal
+function getEvent(ev) {
 
-    updateEV.get().then((doc) => {
+    // Sets global var currentEventID to event Id to use when update event button is pressed
+    currentEventID = ev;
+    var docRef = db.collection("events").doc(ev);
+
+    docRef.get().then((doc) => {
+
         if (doc.exists) {
-            document.getElementById("edit-Title").value = updateEV.Title;
-            document.getElementById("edit-Desc").value = updateEV.Desc;
+
+            //Fills Edit Event modal with current event information
+            // console.log("Document data: ", doc.data());
+            var thisEvent = doc.data();
+            document.getElementById('edit-Title').value = thisEvent.Title;
+            document.getElementById('edit-Desc').value = thisEvent.Desc;
+            document.getElementById("edit_search_input").value = thisEvent.Location;
+
+            var evDate = thisEvent.Date.toDate().toISOString();
+            document.getElementById("edit-Date").value = evDate.substring(0,evDate.length-1);
         }
         else {
-            console.log("No such document");
+            console.log("no such document");
         }
     }).catch((error) => {
         console.log("Error getting document: ", error);
-    })
+    });
 }
+
+
+// Allows for users to edit their events
+const editForm = document.querySelector('#edit-form');
+editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    var newEventDate = new Date(editForm['edit-Date'].value);
+
+    var eventsRef = db.collection("events");
+
+    // Pulls current event and sets values to users new inputted data
+    eventsRef.doc(currentEventID).set({
+        Date: newEventDate,
+        Desc: editForm['edit-Desc'].value,
+        Location: editForm['edit_search_input'].value,
+        Title: editForm['edit-Title'].value,
+        admin: userEmail
+    }).then(() => {
+        const modal = document.querySelector('#modal-edit');
+        M.Modal.getInstance(modal).close();
+        editForm.reset();
+    }).catch(err => {
+        console.log(err.message)
+    });
+});
 
 
 
@@ -139,7 +178,7 @@ const setupEvents = (data) => {
                             <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
                             <br />
                             <button class="btn grey darken-3 z-depth-0" onclick="deleteEvent('${eventId}')">Delete Event</button>
-                            <button class="btn grey darken-3 z-depth-0 modal-trigger" href="#" data-target="modal-edit" onclick="updateEvent('${eventId}')">Edit Event</button>
+                            <button class="btn grey darken-3 z-depth-0 modal-trigger" href="#" data-target="modal-edit" onclick="getEvent('${eventId}')">Edit Event</button>
                         </div>
                     </li>
                 `;
