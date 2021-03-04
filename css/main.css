@@ -80,7 +80,7 @@
   /* footer edits */
   body {
     display: flex;
-    color: rgb(219, 170, 177);
+    color: rgb(175, 152, 155);
     min-height: 100vh;
     flex-direction: column;
   }
