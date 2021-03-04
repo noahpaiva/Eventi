@@ -87,8 +87,11 @@
   footer-wrap {
     width: 100%;
     font-size: 14px;
-    background-color: #9b7b7b;
   }
+    .page-footer{
+      background-color: #9b7b7b;
+    }
+    
   main {
     flex: 1 0 auto;
   }
