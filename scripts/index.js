@@ -203,6 +203,13 @@ const setupEvents = (data) => {
     // IF NO USER IS LOGGED IN
     else {
         let li = `
+        <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src="img/event.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="img/event2.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="img/event3.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="img/event4.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="img/event5.jpg"></a>
+        </div>
         <h5>Please log in to view your events.</h5>
         `;
         eventList.innerHTML = li;
@@ -224,3 +231,4 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function() {
     $('select').formSelect();
 });
+
