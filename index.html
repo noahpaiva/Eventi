@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
     <title>Eventi - Plan it!</title>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
 
     <style>
@@ -198,6 +199,13 @@
         <ul class="collapsible z-depth-0 events" style="border: none;">
         </ul>
     </div>
+    <div class="carousel" id="login-carousel">
+        <a class="carousel-item" href="#one!"><img src="img/event.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="img/event2.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="img/event3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="img/event4.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="img/event5.jpg"></a>
+    </div>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -231,8 +239,7 @@
         // db.settings({ timestampsInSnapshots: true});
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
