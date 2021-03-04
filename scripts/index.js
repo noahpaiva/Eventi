@@ -158,7 +158,16 @@ document.addEventListener('DOMContentLoaded', function() {
   $(document).ready(function(){
     $('.carousel').carousel();
   });
-      
+  var instance = M.Carousel.init({
+    fullWidth: true
+  });
+
+  // Or with jQuery
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true
+  });
+        
 
 // Allows for events to be collapsible modals
 document.addEventListener('DOMContentLoaded', function() {
