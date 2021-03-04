@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Or with jQuery
 
   $('.carousel.carousel-slider').carousel({
-    fullWidth: true
+    fullWidth: false
   });
         
 
