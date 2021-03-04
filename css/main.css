@@ -74,3 +74,5 @@
   font-family: "Roboto", sans-serif;
 }
 /* ----- End Event Content ----- */
+.carousel .carousel-item {
+  width:300px !important;}
