@@ -84,12 +84,12 @@
     min-height: 100vh;
     flex-direction: column;
   }
-
-  main {
-    flex: 1 0 auto;
-  }
   footer-wrap {
     width: 100%;
     font-size: 14px;
     background-color: #9b7b7b;
   }
+  main {
+    flex: 1 0 auto;
+  }
+ 
