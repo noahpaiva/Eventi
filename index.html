@@ -136,6 +136,22 @@
                     <input type="text" id="Title" requried>
                     <label for="title">Event Title</label>
                 </div>
+<<<<<<< Updated upstream
+=======
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Event Category</option>
+                        <option value="outdoor">Outdoor Activities</option>
+                        <option value="dining">Dining Out</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="business">Business</option>
+                        <option value="family">Family Gathering</option>
+                        <option value="personal">Personal Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <!-- <label>Materialize Select</label> -->
+                </div>
+>>>>>>> Stashed changes
                 <div class="input-field">
                     <textarea id="Desc" class="materialize-textarea" required></textarea>
                     <label for="content">Event Description</label>
@@ -158,7 +174,56 @@
                     <input type="datetime-local" id="Date" name="eventTime">
                 </div>
                 
+<<<<<<< Updated upstream
                 <button class="btn grey darken-3 z-depth-0">Create</button>
+=======
+                <button class="btn grey darken-3 z-depth-0">Create Event</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Event Modal-->
+    <div id="modal-edit" class="modal">
+        <div class="modal-content">
+            <h4>Edit Event</h4><br />
+            <form id="edit-form">
+                <div class="input-field">
+                    <input type="text" id="edit-Title" requried>
+                    <label for="title">Event Title</label>
+                </div>
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Event Category</option>
+                        <option value="outdoor">Outdoor Activities</option>
+                        <option value="dining">Dining Out</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="business">Business</option>
+                        <option value="family">Family Gathering</option>
+                        <option value="personal">Personal Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <!-- <label>Materialize Select</label> -->
+                </div>
+                <div class="input-field">
+                    <textarea id="edit-Desc" class="materialize-textarea" required></textarea>
+                    <label for="content">Event Description</label>
+                </div>
+                <div class="input-field">
+                    <label>Location:</label>
+                    <input type="text" class="form-control" id="edit_search_input" placeholder="Type address..." />
+                    <input type="hidden" id="edit_latitude_input" />
+                    <input type="hidden" id="edit_longitude_input" />
+                </div>
+                <div class="latlong-view">
+                    <p hidden><b>Latitude:</b> <span id="edit_latitude_view"></span></p>
+                    <p hidden><b>Longitude:</b> <span id="edit_longitude_view"></span></p>
+                </div>
+                <div class="input-field">
+                    <input type="datetime-local" id="edit-Date" name="eventTime">
+                </div>
+                
+                <button class="btn grey darken-3 z-depth-0">Update Event</button>
+>>>>>>> Stashed changes
             </form>
         </div>
     </div>
