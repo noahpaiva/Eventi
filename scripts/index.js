@@ -218,17 +218,17 @@ const setupEvents = (data) => {
 }
 
 
+
 // Allows for events to be collapsible modals
 document.addEventListener('DOMContentLoaded', function() {
 
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+    
     var modals = document.querySelectorAll('.modal');
     M.Modal.init(modals);
 
     var items = document.querySelectorAll('.collapsible');
     M.Collapsible.init(items);
-});
-
-$(document).ready(function() {
-    $('select').formSelect();
 });
 
