@@ -40,6 +40,7 @@ createForm.addEventListener('submit', (e) => {
         Desc: createForm['Desc'].value,
         Location: createForm['search_input'].value,
         Title: createForm['Title'].value,
+        Category: createForm['Category'].value,
         admin: userEmail
     }).then(() => {
         //Close and clear modal form

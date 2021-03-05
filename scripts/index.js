@@ -95,6 +95,7 @@ function getEvent(ev) {
             // console.log("Document data: ", doc.data());
             var thisEvent = doc.data();
             document.getElementById('edit-Title').value = thisEvent.Title;
+            document.getElementById('edit-Category').value = thisEvent.Category;
             document.getElementById('edit-Desc').value = thisEvent.Desc;
             document.getElementById("edit_search_input").value = thisEvent.Location;
 
@@ -125,6 +126,7 @@ editForm.addEventListener('submit', (e) => {
         Desc: editForm['edit-Desc'].value,
         Location: editForm['edit_search_input'].value,
         Title: editForm['edit-Title'].value,
+        Category: editForm['edit-Category'].value,
         admin: userEmail
     }).then(() => {
         const modal = document.querySelector('#modal-edit');
@@ -170,12 +172,29 @@ const setupEvents = (data) => {
                 var thisDate = event.Date.toDate();
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
+                var cat;
+                if(event.Category == "outdoor") {
+                    cat = "Outdoor Activity";
+                } else if (event.Category == "dining") {
+                    cat = "Dining Out";
+                } else if (event.Category == "drinks") {
+                    cat = "Drinks";
+                } else if (event.Category == "business") {
+                    cat = "Business";
+                } else if (event.Category == "family") {
+                    cat = "Family Gathering";
+                } else if (event.Category == "personal") {
+                    cat = "Personal Event";
+                } else {
+                    cat = "Other";
+                }
 
                 // BUILDING USER EVENTS INTO HTML
                 let li = `
                     <li>
                         <div class="collapsible-header orange lighten-4"><strong id="event-title">${event.Title}</strong></div>
                         <div class="collapsible-body light orange lighten-5" id="event-content">
+                            Category: ${cat} <br />
                             ${event.Desc} <br />
                             ${thisDate} <br />
                             <a href="https://www.google.com/maps/search/?api=1&query=${loc}" target="_blank">${event.Location}</a> <br />
