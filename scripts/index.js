@@ -162,7 +162,7 @@ const setupEvents = (data) => {
 
     // Checks if data exists for an event
     if(data.length) {
-        document.getElementById("login-carousel").style.display = "none";
+        document.getElementById("logged-out-content").style.display = "none";
         let html = '';
         data.forEach(doc => {
             const event = doc.data();
@@ -228,7 +228,7 @@ const setupEvents = (data) => {
         
         <h5>Please log in to view your events.</h5>
         `;
-        document.getElementById("login-carousel").style.display = "block";
+        document.getElementById("logged-out-content").style.display = "block";
         eventList.innerHTML = li;
         
     }   

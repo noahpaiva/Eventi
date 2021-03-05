@@ -1,3 +1,9 @@
+/* 
+CHANGE TITLE FONT TO EXO2, ARGENT
+CHANGE EVENT CONTENT FONT TO CATAMARAN
+https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-designs#:~:text=30%20Professional%20Fonts%20for%20Upscale%20Web%20Designs%201,9%20Exo%202.%2010%20Signika.%20More%20items 
+*/
+
 /* ----- Nav Bar CSS ----- */
 #nav-mobile {
   float: right;
@@ -105,4 +111,28 @@ footer {
   bottom: 0;
   width: 100%;
   height: 9.5em;
+  color: rgb(175, 152, 155);
+}
+
+.carousel .carousel-item {
+  width: 425px !important;
+}
+
+/* footer edits */
+body {
+  display: flex;
+
+  min-height: 100vh;
+  flex-direction: column;
+}
+footer-wrap {
+  width: 100%;
+  font-size: 14px;
+}
+.page-footer {
+  background-color: #9b7b7b;
+}
+
+main {
+  flex: 1 0 auto;
 }
