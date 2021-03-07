@@ -33,8 +33,6 @@ const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // var date = new Date(document.getElementById("Date").value);
-    // var timeStamp = date.getTime();
     var eventDate = new Date(createForm['Date'].value);
 
     db.collection('events').add({
@@ -42,6 +40,7 @@ createForm.addEventListener('submit', (e) => {
         Desc: createForm['Desc'].value,
         Location: createForm['search_input'].value,
         Title: createForm['Title'].value,
+        Category: createForm['Category'].value,
         admin: userEmail
     }).then(() => {
         //Close and clear modal form
@@ -51,17 +50,9 @@ createForm.addEventListener('submit', (e) => {
 
     }).catch(err => {
         console.log(err.message);
-    })
+    });
 });
 
-
-// edit events
-// const editForm = document.querySelector('#edit-form');
-// editForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     updateEvent
-// });
 
 
 // signup

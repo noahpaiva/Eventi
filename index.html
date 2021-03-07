@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Eventi - Plan it!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
 
-    
     <style>
         .pac-container {
             z-index: 10000 !important;
@@ -27,7 +26,7 @@
     <nav class="z-depth-0 orange lighten-4">
         <div class="nav-wrapper container">
             <a href="#" id="brand-logo">
-                <img src="img/eventiLogo.png" style="width: 70px; margin-top: 10px;">
+                <img src="img/eventiLogo.png" style="height: 75%; margin-top: 5px; margin-bottom: 5px">
             </a>
             <ul id="nav-mobile">
 
@@ -113,7 +112,7 @@
                     <label for="title">Event Title</label>
                 </div>
                 <div class="input-field col s12">
-                    <select>
+                    <select id="Category">
                         <option value="" disabled selected>Event Category</option>
                         <option value="outdoor">Outdoor Activities</option>
                         <option value="dining">Dining Out</option>
@@ -129,10 +128,6 @@
                     <textarea id="Desc" class="materialize-textarea" required></textarea>
                     <label for="content">Event Description</label>
                 </div>
-                <!-- <div class="input-field">
-                    <textarea id="Location" class="materialize-textarea" required></textarea>
-                    <label for="content">Event Location</label>
-                </div> -->
                 <div class="input-field">
                     <label>Location:</label>
                     <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
@@ -146,7 +141,7 @@
                 <div class="input-field">
                     <input type="datetime-local" id="Date" name="eventTime">
                 </div>
-                
+            
                 <button class="btn grey darken-3 z-depth-0">Create Event</button>
             </form>
         </div>
@@ -162,7 +157,7 @@
                     <label for="title">Event Title</label>
                 </div>
                 <div class="input-field col s12">
-                    <select>
+                    <select id="edit-Category">
                         <option value="" disabled selected>Event Category</option>
                         <option value="outdoor">Outdoor Activities</option>
                         <option value="dining">Dining Out</option>
@@ -197,49 +192,47 @@
         </div>
     </div>
 
-    <!-- Edit Event Modal-->
-    <div id="modal-edit" class="modal">
-        <div class="modal-content">
-            <h4>Edit Event</h4><br />
-            <form id="edit-form">
-                <div class="input-field">
-                    <input type="text" id="edit-Title" requried>
-                    <label for="title">Event Title</label>
-                </div>
-                <div class="input-field">
-                    <textarea id="edit-Desc" class="materialize-textarea" required></textarea>
-                    <label for="content">Event Description</label>
-                </div>
-                <!-- <div class="input-field">
-                    <textarea id="Location" class="materialize-textarea" required></textarea>
-                    <label for="content">Event Location</label>
-                </div> -->
-                <div class="input-field">
-                    <label>Location:</label>
-                    <input type="text" class="form-control" id="edit_search_input" placeholder="Type address..." />
-                    <input type="hidden" id="edit_latitude_input" />
-                    <input type="hidden" id="edit_longitude_input" />
-                </div>
-                <div class="latlong-view">
-                    <p hidden><b>Latitude:</b> <span id="edit_latitude_view"></span></p>
-                    <p hidden><b>Longitude:</b> <span id="edit_longitude_view"></span></p>
-                </div>
-                <div class="input-field">
-                    <input type="datetime-local" id="edit-Date" name="eventTime">
-                </div>
-                
-                <button class="btn grey darken-3 z-depth-0">Create</button>
-            </form>
-        </div>
-    </div>
-
     <br />
 
     <!-- Event List-->
-    <div class="container" id="event-container">
-        <ul class="collapsible z-depth-0 events" style="border: none;">
+    <div class="container" id="event-container" style="padding-left: 15%;">
+        <ul class="collapsible popout z-depth-0 events" style="border: none; width: 70%;">
         </ul>
     </div>
+    
+    <div id="logged-out-content">
+        
+        <div class="carousel" id="login-carousel">
+            <a class="carousel-item" href="#one!"><img src="https://th.bing.com/th/id/R3e6de7d1ee7f9345b104cb2d3d37453b?rik=ougiLrLZUlO0lw&riu=http%3a%2f%2frestaurantengine.com%2fwp-content%2fuploads%2f2015%2f05%2fstartup-restaurants-typically-overspend.jpg&ehk=4Q1fgqJRvfi9LJsjR6X0wLFXcLwxXmYLdxTOpHg09aM%3d&risl=&pid=ImgRaw"></a>
+            <a class="carousel-item" href="#two!"><img src="https://th.bing.com/th/id/Re3903492cd0f501307a9e0fdf22e9a1c?rik=cByyo9VpF4Y55w&riu=http%3a%2f%2fwww.purepublicrelations.com.au%2fwp-content%2fuploads%2f2014%2f12%2fSmall-business-collaborative-meeting.jpg&ehk=2Wiq61RyOjn0Wp34Qs1YhBVKsIHY3E0zWs0NkYV52pM%3d&risl=&pid=ImgRaw"></a>
+            <a class="carousel-item" href="#three!"><img src="https://cdn7.dissolve.com/p/D869_25_441/D869_25_441_1200.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="https://thumbs.dreamstime.com/b/group-friends-party-event-new-year-birthday-holiday-event-concept-group-friends-party-event-105232065.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="https://www.azlocalbusiness.com/wp-content/uploads/2019/09/Costume-party-halloween.jpg"></a>
+        </div>
+        <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div>
+
+    </div>
+    
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Thank you for visiting Eventi.</h5>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text"></h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Developed by:</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Noah Paiva</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Holly Bernich</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Veronica Marquez</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+        </div>
+      </footer>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -273,57 +266,10 @@
         // db.settings({ timestampsInSnapshots: true});
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/placesSearch.js"></script>
-    <div class="jumbotron">
-        <h1>       Welcome to Eventi.</h1>
-        <p>     Eventi is a revolutionary web based event planner. Try it out today!</p>
-        <p></p>
-    </div>
-    <ul>
-        <li>Professional Events</li>
-        <li>Business Events</li>
-        <li>Personal Events</li>
-        <li>Social Events</li>
-    </ul>
-    <div class="simple-slider">
-        <div class="swiper-container">
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-    <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="https://th.bing.com/th/id/R3e6de7d1ee7f9345b104cb2d3d37453b?rik=ougiLrLZUlO0lw&riu=http%3a%2f%2frestaurantengine.com%2fwp-content%2fuploads%2f2015%2f05%2fstartup-restaurants-typically-overspend.jpg&ehk=4Q1fgqJRvfi9LJsjR6X0wLFXcLwxXmYLdxTOpHg09aM%3d&risl=&pid=ImgRaw"></a>
-        <a class="carousel-item" href="#two!"><img src="https://th.bing.com/th/id/Re3903492cd0f501307a9e0fdf22e9a1c?rik=cByyo9VpF4Y55w&riu=http%3a%2f%2fwww.purepublicrelations.com.au%2fwp-content%2fuploads%2f2014%2f12%2fSmall-business-collaborative-meeting.jpg&ehk=2Wiq61RyOjn0Wp34Qs1YhBVKsIHY3E0zWs0NkYV52pM%3d&risl=&pid=ImgRaw"></a>
-        <a class="carousel-item" href="#three!"><img src="https://cdn7.dissolve.com/p/D869_25_441/D869_25_441_1200.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="https://thumbs.dreamstime.com/b/group-friends-party-event-new-year-birthday-holiday-event-concept-group-friends-party-event-105232065.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="https://www.azlocalbusiness.com/wp-content/uploads/2019/09/Costume-party-halloween.jpg"></a>
-      </div>
-    </div>
-    <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div>
-    <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Thank you for visiting Eventi.</h5>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text"></h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Developed by:</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Noah Paiva</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Holly Bernich</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Veronica Marquez</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-        </div>
-      </footer>
-
-      <i class="material-icons">add</i>
 </body>
 </html>
