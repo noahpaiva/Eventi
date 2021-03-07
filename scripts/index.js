@@ -170,7 +170,26 @@ const setupEvents = (data) => {
         
     }   
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
 
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+  var instance = M.Carousel.init({
+    fullWidth: true
+  });
+
+  // Or with jQuery
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: false
+  });
+        
 
 // Allows for events to be collapsible modals
 document.addEventListener('DOMContentLoaded', function() {

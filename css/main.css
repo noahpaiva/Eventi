@@ -79,3 +79,25 @@
   font-family: "Roboto", sans-serif;
 }
 /* ----- End Event Content ----- */
+.carousel .carousel-item {
+  width: 425px !important;}
+
+  /* footer edits */
+  body {
+    display: flex;
+    color: rgb(175, 152, 155);
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  footer-wrap {
+    width: 100%;
+    font-size: 14px;
+  }
+    .page-footer{
+      background-color: #9b7b7b;
+    }
+    
+  main {
+    flex: 1 0 auto;
+  }
+ 
