@@ -17,9 +17,11 @@ font-family: 'Exo 2', sans-serif;
 
 #nav-item a {
   font-family: "Exo 2", sans-serif;
+  color: #34cfed;
 }
-.navBar {
+#top-navbar {
   width: 100%;
+  background-color: #1e296f;
 }
 /* ----- End Nav Bar ----- */
 
@@ -132,6 +134,7 @@ body {
 
   min-height: 100vh;
   flex-direction: column;
+  background-color: #211b25;
 }
 footer-wrap {
   width: 100%;
@@ -179,7 +182,7 @@ main {
 
 /* ----- Welcome Content -----  */
 #welcome-title {
-  background-color: #ffe0b2;
+  background-color: #34cfed;
   width: 35%;
   margin-left: 32.5%;
   text-align: center;
@@ -192,7 +195,7 @@ main {
   font-size: 68px;
 }
 #welcome-info {
-  background-color: #ffe0b2;
+  background-color: #3795c3;
   width: 60%;
   margin-left: 20%;
   border-radius: 15px;
@@ -245,3 +248,7 @@ main {
     margin-left: 15%;
   }
 }
+
+/* #background-img {
+  background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=z7jX+vGp&id=9B230D721487F6450FEC931719D11E9AE3500F3D&thid=OIP.z7jX-vGpXaliobQEdMriDAFCDB&mediaurl=https%3A%2F%2Fliveengegament.files.wordpress.com%2F2017%2F06%2Fhouse-outdoor-party1.jpg%3Fw%3D1200&exph=722&expw=1200&q=outdoor+event&simid=608052947606769458&ck=F9CECF3AD94F226DAED3A028016F2CBF&selectedindex=92&form=EX0023&ajaxhist=0&adlt=demote&shtp=GetUrl&shid=3234d8dc-b2b9-43d1-9c63-6fccaa6abedd&shtk=VGhpbmdzIFRvIENvbnNpZGVyIFdoaWxlIEFycmFuZ2luZyBBIEhvdXNlIE91dGRvb3IgUGFydHkgLi4u&shdk=Rm91bmQgb24gQmluZyBmcm9tIGxpdmVlbmdlZ2FtZW50LndvcmRwcmVzcy5jb20%3D&shhk=r0NxP0Wp%2FLNe34JpXTplBszkrX11K%2Fpz3X7eG1l8rHw%3D&shth=OSH.mJKkzFVyAvxcjOpR1AZm0g");
+} */

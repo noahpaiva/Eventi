@@ -21,10 +21,10 @@
     </style>
 
 </head>
-<body class="grey darken-3">
+<body>
 
     <!--Nav bar-->
-    <nav class="z-depth-0 orange lighten-4 navBar">
+    <nav class="z-depth-0 navBar" id="top-navbar">
         <div class="nav-wrapper container">
             <a href="#" id="brand-logo">
                 <img src="img/eventiLogo.png" style="height: 75%; margin-top: 5px; margin-bottom: 5px">
@@ -32,28 +32,31 @@
             <ul id="nav-mobile">
 
                 <li class="logged-out" id="nav-item" style:"display: none;">
-                    <a href="#" class="black-text modal-trigger" data-target="modal-login">Login</a>
+                    <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
                 </li>
 
                 <li class="logged-out" id="nav-item" style:"display: none;">
-                    <a href="#" class="black-text modal-trigger" data-target="modal-signup">Sign up</a>
+                    <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
                 </li>
 
                 <li class="logged-in" id="nav-item" style:"display: none;">
-                    <a href="#" class="black-text modal-trigger" data-target="modal-create">Create Event</a>
+                    <a href="#" class="modal-trigger" data-target="modal-create">Create Event</a>
                 </li>
 
                 <li class="logged-in" id="nav-item" style:"display: none;">
-                    <a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a>
+                    <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
                 </li>
 
                 <li class="logged-in" id="nav-item" style:"display: none;">
-                    <a href="#" class="black-text" id="logout">Logout</a>
+                    <a href="#" id="logout">Logout</a>
                 </li>
                 
             </ul>
         </div>
     </nav>
+
+    <div id="background-img"></div>
+
 
     <!-- Sign Up modal-->
     <div id="modal-signup" class="modal">
