@@ -198,3 +198,7 @@ main {
   font-size: 22px;
 }
 /* ----- End Welcome Content -----  */
+
+.wrapper {
+  width: 100%;
+}
