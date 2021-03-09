@@ -4,8 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Exo+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="manifest.json">
     <title>Eventi - Plan it!</title>
@@ -192,15 +193,44 @@
         </div>
     </div>
 
-    <br />
 
     <!-- Event List-->
-    <div class="container" id="event-container" style="padding-left: 15%;">
-        <ul class="collapsible popout z-depth-0 events" style="border: none; width: 70%;">
-        </ul>
+    <div class="container" id="event-container">
+        <div id="logged-in-content">
+            <br />
+            <div id="logged-in-intro">
+                <div id="intro-content">
+                    <h3>Welcome to Eventi.</h3>
+                        <h5>This is your Eventi. dashboard.</h5><br />
+                        <p><strong>From here you can: </strong></p>
+                    <ul>
+                        <li> - Create new events</li>
+                        <li> - View your account information</li>
+                        <li> - Verify your email (if you have not already)</li>
+                        <li> - Browse your current events</li>
+                        <li> - Delete and edit your events</li>
+                    </ul>
+                    <br />
+                </div>
+            </div>
+            <div style="float: right; width: 45%;">
+                
+                <h5 style="color: #ffe0b2; text-align: center; font-family: 'Exo 2', sans-serif;">Your Events:</h5>
+                <ul class="collapsible popout z-depth-0 events" style="border: none; margin-top: 30px;">
+                </ul>
+            </div>
+        </div>
+        
     </div>
     
     <div id="logged-out-content">
+
+        <div id="welcome-content">
+            <div id="welcome-title">
+                <h2>Welcome to Eventi.</h2>
+            </div>
+            
+        </div>
         
         <div class="carousel" id="login-carousel">
             <a class="carousel-item" href="#one!"><img src="https://th.bing.com/th/id/R3e6de7d1ee7f9345b104cb2d3d37453b?rik=ougiLrLZUlO0lw&riu=http%3a%2f%2frestaurantengine.com%2fwp-content%2fuploads%2f2015%2f05%2fstartup-restaurants-typically-overspend.jpg&ehk=4Q1fgqJRvfi9LJsjR6X0wLFXcLwxXmYLdxTOpHg09aM%3d&risl=&pid=ImgRaw"></a>
@@ -209,18 +239,32 @@
             <a class="carousel-item" href="#four!"><img src="https://thumbs.dreamstime.com/b/group-friends-party-event-new-year-birthday-holiday-event-concept-group-friends-party-event-105232065.jpg"></a>
             <a class="carousel-item" href="#five!"><img src="https://www.azlocalbusiness.com/wp-content/uploads/2019/09/Costume-party-halloween.jpg"></a>
         </div>
-        <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div>
 
+        <div id="welcome-info">
+            <p>
+                Eventi. is a simple, yet robust, event planning website. 
+                Eventi. has been developed as a display of the skills learned by the group, 
+                with goals of creating a fluid event planning website to be used by individuals
+                looking to keep track of some of the events in their lives; such as going out 
+                for dinner with a group of friends, noting the time and place of a family gathering, 
+                and scheduling meetings with fellow employees, just to name a few. We hope that you 
+                can find Eventi. useful in some way, and that our time and effort that has been put
+                into this project shows in our work.
+            </p>
+        </div>
+
+        <!-- <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div> -->
+        
+        
     </div>
     
     <footer class="page-footer">
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
+            <div style="float: left;">
               <h5 class="white-text">Thank you for visiting Eventi.</h5>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text"></h5>
+            <div style="float: right;">
               <ul>
                 <li><a class="grey-text text-lighten-3" href="#!">Developed by:</a></li>
                 <li><a class="grey-text text-lighten-3" href="#!">Noah Paiva</a></li>
@@ -229,8 +273,6 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright">
         </div>
       </footer>
 

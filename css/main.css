@@ -4,6 +4,11 @@ CHANGE EVENT CONTENT FONT TO CATAMARAN
 https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-designs#:~:text=30%20Professional%20Fonts%20for%20Upscale%20Web%20Designs%201,9%20Exo%202.%2010%20Signika.%20More%20items 
 */
 
+/* 
+font-family: 'Catamaran', sans-serif;
+font-family: 'Exo 2', sans-serif;
+*/
+
 /* ----- Nav Bar CSS ----- */
 #nav-mobile {
   float: right;
@@ -11,7 +16,7 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #nav-item a {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 /* ----- End Nav Bar ----- */
 
@@ -21,11 +26,11 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #modal-signup div h4 {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 
 #modal-signup div form div label {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Sign Up Modal ----- */
 
@@ -35,11 +40,11 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #modal-login div h4 {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 
 #modal-login div form div label {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Login Modal ----- */
 
@@ -49,11 +54,11 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #modal-account div h4 {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 
 #modal-account div div {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Account Modal Info ----- */
 
@@ -63,26 +68,26 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #modal-create div h4 {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 
 #modal-create div form div label {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Create Event Modal ----- */
 
 /* ----- HTML Event Container -----*/
 #event-container {
-  margin-top: 40px;
 }
 
 /* ----- Event Content CSS ----- */
 #event-title {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
+  /* border-radius: 10px 10px 0px 0px; */
 }
 
 #event-content {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Event Content ----- */
 
@@ -92,11 +97,11 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 }
 
 #modal-edit div h4 {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Exo 2", sans-serif;
 }
 
 #modal-edit div form div label {
-  font-family: "Roboto", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 /* ----- End Edit Event Modal ----- */
 
@@ -104,7 +109,7 @@ https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-
 
 /* ----- Footer CSS ----- */
 html body {
-  min-height: 100%;
+  min-height: 130vh;
 }
 footer {
   position: fixed;
@@ -118,7 +123,7 @@ footer {
   width: 425px !important;
 }
 
-/* footer edits */
+/* ----- footer edits ----- */
 body {
   display: flex;
 
@@ -136,3 +141,60 @@ footer-wrap {
 main {
   flex: 1 0 auto;
 }
+
+/* ----- Eventi Introduction Content ----- */
+#logged-in-intro {
+  margin-top: 40px;
+  width: 45%;
+  float: left;
+  background-color: #ffe0b2;
+  border-radius: 15px;
+}
+#intro-content {
+  padding-left: 10px;
+}
+#intro-content h3 {
+  font-size: 36px;
+  font-family: "Exo 2", sans-serif;
+}
+#intro-content h5 {
+  font-size: 22px;
+  font-family: "Exo 2", sans-serif;
+}
+#intro-content p {
+  font-size: 16px;
+  font-family: "Catamaran", sans-serif;
+}
+#intro-content ul {
+  font-family: "Catamaran", sans-serif;
+}
+/* ----- End Eventi Introduction Content ----- */
+
+/* ----- Welcome Content -----  */
+#welcome-title {
+  background-color: #ffe0b2;
+  width: 35%;
+  margin-left: 32.5%;
+  text-align: center;
+  border-radius: 15px;
+}
+#welcome-title h2 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 68px;
+}
+#welcome-info {
+  background-color: #ffe0b2;
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 15px;
+}
+#welcome-info p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 25px 25px 25px 25px;
+  font-family: "Catamaran", sans-serif;
+  font-size: 22px;
+}
+/* ----- End Welcome Content -----  */
