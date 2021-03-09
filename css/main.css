@@ -18,6 +18,9 @@ font-family: 'Exo 2', sans-serif;
 #nav-item a {
   font-family: "Exo 2", sans-serif;
 }
+.navBar {
+  width: 100%;
+}
 /* ----- End Nav Bar ----- */
 
 /* ----- Sign Up Modal CSS ----- */
@@ -168,6 +171,10 @@ main {
 #intro-content ul {
   font-family: "Catamaran", sans-serif;
 }
+#logged-in-events {
+  float: right;
+  width: 45%;
+}
 /* ----- End Eventi Introduction Content ----- */
 
 /* ----- Welcome Content -----  */
@@ -201,4 +208,40 @@ main {
 
 .wrapper {
   width: 100%;
+}
+
+@media all and (max-width: 500px) {
+  /* ----- Logged In Items ----- */
+  #logged-in-intro {
+    float: none;
+    width: 90%;
+    margin-left: 5%;
+  }
+  #logged-in-events {
+    float: none;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  /* ----- Logged Out Items ----- */
+  #welcome-title {
+    width: 90%;
+    margin-left: 5%;
+  }
+  #welcome-info {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+}
+
+@media all and (max-width: 810px) {
+  /* ----- Logged Out Items ----- */
+  #welcome-title {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #welcome-info {
+    width: 70%;
+    margin-left: 15%;
+  }
 }
