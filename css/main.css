@@ -17,11 +17,11 @@ font-family: 'Exo 2', sans-serif;
 
 #nav-item a {
   font-family: "Exo 2", sans-serif;
-  color: #34cfed;
+  color: #fdf8f5;
 }
 #top-navbar {
   width: 100%;
-  background-color: #1e296f;
+  background-color: #4f4846;
 }
 /* ----- End Nav Bar ----- */
 
@@ -134,7 +134,7 @@ body {
 
   min-height: 100vh;
   flex-direction: column;
-  background-color: #211b25;
+  background-color: #e8cebf;
 }
 footer-wrap {
   width: 100%;
@@ -182,7 +182,7 @@ main {
 
 /* ----- Welcome Content -----  */
 #welcome-title {
-  background-color: #34cfed;
+  background-color: #266150;
   width: 35%;
   margin-left: 32.5%;
   text-align: center;
@@ -193,9 +193,10 @@ main {
   padding-bottom: 14px;
   font-family: "Exo 2", sans-serif;
   font-size: 68px;
+  color: #fdf8f5;
 }
 #welcome-info {
-  background-color: #3795c3;
+  background-color: #266150;
   width: 60%;
   margin-left: 20%;
   border-radius: 15px;
@@ -206,6 +207,7 @@ main {
   margin: 25px 25px 25px 25px;
   font-family: "Catamaran", sans-serif;
   font-size: 22px;
+  color: #fdf8f5;
 }
 /* ----- End Welcome Content -----  */
 
