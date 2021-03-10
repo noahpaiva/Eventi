@@ -119,14 +119,18 @@ font-family: 'Exo 2', sans-serif;
 }
 
 /* ----- Carousel CSS ----- */
+
 .carousel {
   width: 100% !important;
+  height: 400px;
 }
-.carousel .carousel-item {
-  width: 100vh !important;
+.carousel-slider .carousel-item {
+  width: 100% !important;
+  left: 0px;
+  top: 0px;
 }
-.carousel .carousel-item img {
-  width: 100vh !important;
+.carousel .carousel-item a {
+  
 }
 
 /* ----- footer edits ----- */

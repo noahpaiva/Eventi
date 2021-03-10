@@ -262,11 +262,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(document).ready(function(){
-    $('.carousel').carousel();
-});
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
+    $('.carousel').carousel({
+        indicators: true
+    });
 });
 
 $(document).ready(function(){
