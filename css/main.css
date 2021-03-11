@@ -27,35 +27,39 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Sign Up Modal CSS ----- */
 #modal-signup {
-  background-color: #ffedd1;
+  background-color: #98878f;
 }
 
 #modal-signup div h4 {
   font-family: "Exo 2", sans-serif;
+  color: black;
 }
 
 #modal-signup div form div label {
   font-family: "Catamaran", sans-serif;
+  color: black;
 }
 /* ----- End Sign Up Modal ----- */
 
 /* ----- Login Modal CSS ----- */
 #modal-login {
-  background-color: #ffedd1;
+  background-color: #98878f;
 }
 
 #modal-login div h4 {
   font-family: "Exo 2", sans-serif;
+  color: black;
 }
 
 #modal-login div form div label {
   font-family: "Catamaran", sans-serif;
+  color: black;
 }
 /* ----- End Login Modal ----- */
 
 /* ----- Account Info Modal CSS ----- */
 #modal-account {
-  background-color: #ffedd1;
+  background-color: #98878f;
 }
 
 #modal-account div h4 {
@@ -69,15 +73,17 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Create Event Modal CSS ----- */
 #modal-create {
-  background-color: #ffedd1;
+  background-color: #98878f;
 }
 
 #modal-create div h4 {
   font-family: "Exo 2", sans-serif;
+  color: black;
 }
 
 #modal-create div form div label {
   font-family: "Catamaran", sans-serif;
+  color: black;
 }
 /* ----- End Create Event Modal ----- */
 
@@ -205,7 +211,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #ffcaaf;
+  background-color: #7a6e85;
 }
 
 main {
@@ -350,17 +356,18 @@ footer {
 
 @media all and (max-width: 500px) {
   /* ----- Logged In Items ----- */
-  #logged-in-intro {
+  #logged-in-content {
+    width: 100%;
+  }
+  #left-side-details {
     float: none;
     width: 90%;
-    margin-left: 5%;
+    padding-left: 10%;
   }
-  #logged-in-events {
+  #right-side-details {
     float: none;
     width: 90%;
-    margin-left: 5%;
-  }
-  #logged-in-account-info {
+    padding-left: 10%;
   }
   /* ----- Logged Out Items ----- */
   #welcome-title {
