@@ -212,7 +212,7 @@ main {
   flex: 1 0 auto;
 }
 footer {
-  background-color: #4f4846;
+  background-color: #192231;
   font-family: "Exo 2", sans-serif;
   font-size: 1.125rem;
   width: 100%;
@@ -317,12 +317,12 @@ footer {
 
 /* ----- Welcome Content -----  */
 #welcome-title {
-  background-color: #94a89a;
+  background-color: #494e6b;
   width: 35%;
   margin-left: 32.5%;
   text-align: center;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px rgb(31, 31, 65);
 }
 #welcome-title h2 {
   padding-top: 14px;
@@ -332,11 +332,11 @@ footer {
   color: #fdf8f5;
 }
 #welcome-info {
-  background-color: #94a89a;
+  background-color: #494e6b;
   width: 60%;
   margin-left: 20%;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px rgb(51, 22, 43);
 }
 #welcome-info p {
   padding-top: 20px;
