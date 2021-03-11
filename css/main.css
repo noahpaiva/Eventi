@@ -21,7 +21,7 @@ font-family: 'Exo 2', sans-serif;
 }
 #top-navbar {
   width: 100%;
-  background-color: #4f4846;
+  background-color: #192231;
 }
 /* ----- End Nav Bar ----- */
 
@@ -181,7 +181,7 @@ body,
   color: #fff;
 }
 .slide-content img {
-  height: 100%;
+  height: 50%;
 }
 
 .arrow {
@@ -211,7 +211,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #7a6e85;
+  background-color: #9992a0;
 }
 
 main {
@@ -326,7 +326,7 @@ footer {
   margin-left: 32.5%;
   text-align: center;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px rgb(31, 31, 65);
+  box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
 #welcome-title h2 {
   padding-top: 14px;
@@ -340,7 +340,7 @@ footer {
   width: 60%;
   margin-left: 20%;
   border-radius: 15px;
-  box-shadow: 10px 10px 5px rgb(51, 22, 43);
+  box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
 #welcome-info p {
   padding-top: 20px;
@@ -359,13 +359,12 @@ footer {
   }
   #left-side-details {
     float: none;
-    width: 90%;
-    padding-left: 10%;
+    width: 95%;
+    padding-left: 2.5%;
   }
   #right-side-details {
     float: none;
-    width: 90%;
-    padding-left: 10%;
+    width: 100%;
   }
   /* ----- Logged Out Items ----- */
   #welcome-title {
