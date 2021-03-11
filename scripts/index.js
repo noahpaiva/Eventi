@@ -201,7 +201,7 @@ const setupEvents = (data) => {
                 // BUILDING USER EVENTS INTO HTML
                 let li = `
                     <li>
-                        <div class="collapsible-header orange lighten-4 z-depth-0" id="event-title">
+                        <div class="collapsible-header z-depth-0" id="event-title">
                             <i class="material-icons">
                                 ${icon}
                             </i>
