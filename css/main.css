@@ -240,9 +240,12 @@ footer {
   width: 45%;
   float: left;
 }
+#right-side-details {
+  width: 45%;
+  float: right;
+}
 #logged-in-account-info {
   margin-top: 40px;
-  height: 18vh;
   background-color: #d2dad5;
   border-radius: 15px;
   box-shadow: 10px 10px 5px grey;
@@ -266,6 +269,7 @@ footer {
   font-size: 16px;
   font-family: "Catamaran", sans-serif;
   padding-left: 10px;
+  padding-bottom: 10px;
 }
 #logged-in-intro {
   margin-top: 40px;
@@ -275,9 +279,9 @@ footer {
 }
 #intro-content {
   padding-left: 10px;
-  padding-top: 1px;
 }
 #intro-content h3 {
+  padding-top: 10px;
   font-size: 36px;
   font-family: "Exo 2", sans-serif;
 }
@@ -292,9 +296,23 @@ footer {
 #intro-content ul {
   font-family: "Catamaran", sans-serif;
 }
+#create-event-on-page {
+  margin-top: 40px;
+  background-color: #d2dad5;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px grey;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#create-event-on-page div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#create-event-on-page a {
+  font-size: 36px;
+  font-family: "Exo 2", sans-serif;
+}
 #logged-in-events {
-  float: right;
-  width: 45%;
 }
 /* ----- End Eventi Introduction Content ----- */
 
