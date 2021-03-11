@@ -163,6 +163,7 @@ const setupEvents = (data) => {
     // Checks if data exists for an event
     if(data.length) {
         document.getElementById("logged-out-content").style.display = "none";
+        document.getElementById("logged-in-content").style.display = "block";
         let html = '';
         data.forEach(doc => {
             const event = doc.data();
@@ -173,27 +174,42 @@ const setupEvents = (data) => {
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
                 var cat;
+                var icon;
                 if(event.Category == "outdoor") {
                     cat = "Outdoor Activity";
+                    icon = "wb_sunny";
                 } else if (event.Category == "dining") {
                     cat = "Dining Out";
+                    icon = "local_dining";
                 } else if (event.Category == "drinks") {
                     cat = "Drinks";
+                    icon = "local_bar";
                 } else if (event.Category == "business") {
                     cat = "Business";
+                    icon = "business_center";
                 } else if (event.Category == "family") {
                     cat = "Family Gathering";
+                    icon = "group";
                 } else if (event.Category == "personal") {
                     cat = "Personal Event";
+                    icon = "favorite";
                 } else {
                     cat = "Other";
+                    icon = "adjust";
                 }
 
                 // BUILDING USER EVENTS INTO HTML
                 let li = `
                     <li>
-                        <div class="collapsible-header orange lighten-4"><strong id="event-title">${event.Title}</strong></div>
-                        <div class="collapsible-body light orange lighten-5" id="event-content">
+                        <div class="collapsible-header z-depth-0" id="event-title">
+                            <i class="material-icons">
+                                ${icon}
+                            </i>
+                            <strong>
+                                ${event.Title}
+                            </strong>
+                        </div>
+                        <div class="collapsible-body light orange lighten-5 z-depth-0" id="event-content">
                             Category: ${cat} <br />
                             ${event.Desc} <br />
                             ${thisDate} <br />
@@ -225,9 +241,8 @@ const setupEvents = (data) => {
     // IF NO USER IS LOGGED IN
     else {
         let li = `
-        
-        <h5>Please log in to view your events.</h5>
         `;
+        document.getElementById("logged-in-content").style.display = "none";
         document.getElementById("logged-out-content").style.display = "block";
         eventList.innerHTML = li;
         
@@ -247,7 +262,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(document).ready(function(){
-    $('.carousel').carousel();
+    $('.carousel').carousel({
+        indicators: true
+    });
 });
 
 $(document).ready(function(){
