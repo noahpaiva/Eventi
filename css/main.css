@@ -21,13 +21,13 @@ font-family: 'Exo 2', sans-serif;
 }
 #top-navbar {
   width: 100%;
-  background-color: #4f4846;
+  background-color: #192231;
 }
 /* ----- End Nav Bar ----- */
 
 /* ----- Sign Up Modal CSS ----- */
 #modal-signup {
-  background-color: #ffedd1;
+  background-color: #985e6d;
 }
 
 #modal-signup div h4 {
@@ -41,7 +41,7 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Login Modal CSS ----- */
 #modal-login {
-  background-color: #ffedd1;
+  background-color: #985e6d;
 }
 
 #modal-login div h4 {
@@ -55,7 +55,7 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Account Info Modal CSS ----- */
 #modal-account {
-  background-color: #ffedd1;
+  background-color: #985e6d;
 }
 
 #modal-account div h4 {
@@ -69,7 +69,7 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Create Event Modal CSS ----- */
 #modal-create {
-  background-color: #ffedd1;
+  background-color: #985e6d;
 }
 
 #modal-create div h4 {
@@ -205,7 +205,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #ffcaaf;
+  background-color: #98878f;
 }
 
 main {
