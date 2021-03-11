@@ -21,7 +21,7 @@ const eventList = document.querySelector('.events');
 // Finds which nav bar items should be shown to the user depending on log in status
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
-const accountDetails = document.querySelector('.account-details');
+const accountDetails = document.getElementById('logged-in-account-info');
 
 
 
@@ -32,9 +32,10 @@ const setupUI = (user) => {
         // Show Account info
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `
-                <div>Logged in as ${user.email}</div>
-                <div>${doc.data().bio}</div>
-                <div>Email Verified: ${user.emailVerified}</div>
+                <div id="info-head">Account Details</div>
+                <div id="email">Logged in as ${user.email}</div>
+                <div id="bio">${doc.data().bio}</div>
+                <div id="verif">Email Verified: ${user.emailVerified}</div>
             `;
             accountDetails.innerHTML = html;
         })
