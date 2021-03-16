@@ -26,7 +26,7 @@ const eventList = document.querySelector('.events');
 // Finds which nav bar items should be shown to the user depending on log in status
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
-const accountDetails = document.getElementById('logged-in-account-info');
+const accountDetails = document.querySelector('.account-details');
 
 
 
@@ -50,7 +50,7 @@ const setupUI = (user) => {
     }
     else {
         // Hide account info
-        accountDetails.innerHTML - '';
+        accountDetails.innerHTML = '';
 
         // Toggle nav bar elements
         loggedInLinks.forEach(item => item.style.display = 'none');
@@ -182,24 +182,21 @@ const setupEvents = (data) => {
                 loc.replace(/,/g, '%2C');
                 var cat;
                 var icon;
-                if(event.Category == "outdoor") {
-                    cat = "Outdoor Activity";
-                    icon = "wb_sunny";
-                } else if (event.Category == "dining") {
-                    cat = "Dining Out";
-                    icon = "local_dining";
-                } else if (event.Category == "drinks") {
-                    cat = "Drinks";
-                    icon = "local_bar";
+                if(event.Category == "personal") {
+                    cat = "Personal";
+                    icon = "face";
                 } else if (event.Category == "business") {
                     cat = "Business";
                     icon = "business_center";
+                } else if (event.Category == "outdoors") {
+                    cat = "Outdoors";
+                    icon = "wb_sunny";
+                } else if (event.Category == "social") {
+                    cat = "Social";
+                    icon = "local_bar";
                 } else if (event.Category == "family") {
-                    cat = "Family Gathering";
+                    cat = "Family";
                     icon = "group";
-                } else if (event.Category == "personal") {
-                    cat = "Personal Event";
-                    icon = "favorite";
                 } else {
                     cat = "Other";
                     icon = "adjust";

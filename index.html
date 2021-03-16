@@ -53,6 +53,10 @@
                 </li>
 
                 <li class="logged-in" id="nav-item" style:"display: none;">
+                    <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
+                </li>
+
+                <li class="logged-in" id="nav-item" style:"display: none;">
                     <a href="#" id="logout">Logout</a>
                 </li>
                 
@@ -123,12 +127,11 @@
                 <div class="input-field col s12">
                     <select id="Category">
                         <option value="" disabled selected>Event Category</option>
-                        <option value="outdoor">Outdoor Activities</option>
-                        <option value="dining">Dining Out</option>
-                        <option value="drinks">Drinks</option>
+                        <option value="personal">Personal</option>
                         <option value="business">Business</option>
-                        <option value="family">Family Gathering</option>
-                        <option value="personal">Personal Event</option>
+                        <option value="outdoors">Outdoor</option>
+                        <option value="social">Social</option>
+                        <option value="family">Family</option>
                         <option value="other">Other</option>
                     </select>
                     <!-- <label>Materialize Select</label> -->
@@ -168,12 +171,11 @@
                 <div class="input-field col s12">
                     <select id="edit-Category">
                         <option value="" disabled selected>Event Category</option>
-                        <option value="outdoor">Outdoor Activities</option>
-                        <option value="dining">Dining Out</option>
-                        <option value="drinks">Drinks</option>
+                        <option value="personal">Personal</option>
                         <option value="business">Business</option>
-                        <option value="family">Family Gathering</option>
-                        <option value="personal">Personal Event</option>
+                        <option value="outdoors">Outdoor</option>
+                        <option value="social">Social</option>
+                        <option value="family">Family</option>
                         <option value="other">Other</option>
                     </select>
                     <!-- <label>Materialize Select</label> -->
@@ -206,6 +208,26 @@
         <div class="container" id="event-container">
             <div id="logged-in-content">
                 <br />
+                <div id="event-create-buttons">
+                    <div id="personal-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Personal</a>
+                    </div>
+                    <div id="business-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Business</a>
+                    </div>
+                    <div id="outdoors-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Outdoors</a>
+                    </div>
+                    <div id="social-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Social</a>
+                    </div>
+                    <div id="family-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Family</a>
+                    </div>
+                    <div id="other-create">
+                        <a href="#" class="modal-trigger" data-target="modal-create">Other</a>
+                    </div>
+                </div>
                 <div id="left-side-details">
                     <div id="logged-in-account-info">
                             
