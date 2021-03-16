@@ -4,400 +4,478 @@ CHANGE EVENT CONTENT FONT TO CATAMARAN
 https://www.elegantthemes.com/blog/resources/professional-fonts-for-upscale-web-designs#:~:text=30%20Professional%20Fonts%20for%20Upscale%20Web%20Designs%201,9%20Exo%202.%2010%20Signika.%20More%20items 
 */
 
+
 /* 
 font-family: 'Catamaran', sans-serif;
 font-family: 'Exo 2', sans-serif;
 */
 
+
 /* ----- Nav Bar CSS ----- */
+
 #nav-mobile {
-  float: right;
-  display: flex;
+    float: right;
+    display: flex;
 }
 
 #nav-item a {
-  font-family: "Exo 2", sans-serif;
-  color: #fdf8f5;
+    font-family: "Exo 2", sans-serif;
+    color: #fdf8f5;
 }
+
 #top-navbar {
-  width: 100%;
-  background-color: #192231;
+    width: 100%;
+    background-color: #192231;
 }
+
+
 /* ----- End Nav Bar ----- */
 
+
 /* ----- Sign Up Modal CSS ----- */
+
 #modal-signup {
-  background-color: #98878f;
+    background-color: #98878f;
 }
 
 #modal-signup div h4 {
-  font-family: "Exo 2", sans-serif;
-  color: black;
+    font-family: "Exo 2", sans-serif;
+    color: black;
 }
 
 #modal-signup div form div label {
-  font-family: "Catamaran", sans-serif;
-  color: black;
+    font-family: "Catamaran", sans-serif;
+    color: black;
 }
+
+
 /* ----- End Sign Up Modal ----- */
 
+
 /* ----- Login Modal CSS ----- */
+
 #modal-login {
-  background-color: #98878f;
+    background-color: #98878f;
 }
 
 #modal-login div h4 {
-  font-family: "Exo 2", sans-serif;
-  color: black;
+    font-family: "Exo 2", sans-serif;
+    color: black;
 }
 
 #modal-login div form div label {
-  font-family: "Catamaran", sans-serif;
-  color: black;
+    font-family: "Catamaran", sans-serif;
+    color: black;
 }
+
+
 /* ----- End Login Modal ----- */
 
+
 /* ----- Account Info Modal CSS ----- */
+
 #modal-account {
-  background-color: #98878f;
+    background-color: #98878f;
 }
 
 #modal-account div h4 {
-  font-family: "Exo 2", sans-serif;
+    font-family: "Exo 2", sans-serif;
 }
 
 #modal-account div div {
-  font-family: "Catamaran", sans-serif;
+    font-family: "Catamaran", sans-serif;
 }
+
+
 /* ----- End Account Modal Info ----- */
 
+
 /* ----- Create Event Modal CSS ----- */
+
 #modal-create {
-  background-color: #98878f;
+    background-color: #98878f;
 }
 
 #modal-create div h4 {
-  font-family: "Exo 2", sans-serif;
-  color: black;
+    font-family: "Exo 2", sans-serif;
+    color: black;
 }
 
 #modal-create div form div label {
-  font-family: "Catamaran", sans-serif;
-  color: black;
+    font-family: "Catamaran", sans-serif;
+    color: black;
 }
+
+
 /* ----- End Create Event Modal ----- */
 
+
 /* ----- HTML Event Container -----*/
-#event-container {
-}
+
+#event-container {}
+
 
 /* ----- Event Content CSS ----- */
+
 #event-title {
-  font-family: "Exo 2", sans-serif;
-  background-color: #d2dad5;
-  box-shadow: 10px 10px 5px grey;
+    font-family: "Exo 2", sans-serif;
+    background-color: #d2dad5;
+    box-shadow: 10px 10px 5px grey;
 }
 
 #event-content {
-  font-family: "Catamaran", sans-serif;
-  box-shadow: 10px 10px 5px grey;
+    font-family: "Catamaran", sans-serif;
+    box-shadow: 10px 10px 5px grey;
 }
+
+
 /* ----- End Event Content ----- */
 
+
 /* ----- Edit Event Modal CSS ----- */
+
 #modal-edit {
-  background-color: #ffedd1;
+    background-color: #ffedd1;
 }
 
 #modal-edit div h4 {
-  font-family: "Exo 2", sans-serif;
+    font-family: "Exo 2", sans-serif;
 }
 
 #modal-edit div form div label {
-  font-family: "Catamaran", sans-serif;
+    font-family: "Catamaran", sans-serif;
 }
+
+
 /* ----- End Edit Event Modal ----- */
 
 .wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 #logged-out-content {
-  width: 100%;
+    width: 100%;
 }
 
+
 /* ----- Carousel CSS ----- */
+
 body,
 #slider,
 .wrap,
 .slide-content {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 50vh;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50vh;
+    overflow-x: hidden;
 }
 
 .wrap {
-  position: relative;
+    position: relative;
 }
 
 .slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slide1 {
-  background-image: url("../img/event1.jpg");
+    background-image: url("../img/event1.jpg");
 }
+
 .slide2 {
-  background-image: url("../img/event2.jpg");
+    background-image: url("../img/event2.jpg");
 }
+
 .slide3 {
-  background-image: url("../img/event3.jpg");
+    background-image: url("../img/event3.jpg");
 }
+
 .slide4 {
-  background-image: url("../img/event4.jpg");
+    background-image: url("../img/event4.jpg");
 }
+
 .slide5 {
-  background-image: url("../img/event5.jpg");
+    background-image: url("../img/event5.jpg");
 }
+
 .slide6 {
-  background-image: url("../img/event6.jpg");
+    background-image: url("../img/event6.jpg");
 }
 
 .slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .slide-content span {
-  font-family: "Exo 2", sans-serif;
-  font-size: 5rem;
-  color: #fff;
+    font-family: "Exo 2", sans-serif;
+    font-size: 5rem;
+    color: #fff;
 }
+
 .slide-content img {
-  height: 50%;
+    height: 50%;
 }
 
 .arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
 }
 
 #arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 30px;
 }
+
 #arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 30px;
 }
+
+
 /* ----- footer edits ----- */
+
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #9992a0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #9992a0;
 }
 
 main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
+
 footer {
-  background-color: #192231;
-  font-family: "Exo 2", sans-serif;
-  font-size: 1.125rem;
-  width: 100%;
-  bottom: 0;
-  margin-top: 40vh;
+    background-color: #192231;
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.125rem;
+    width: 100%;
+    bottom: 0;
+    margin-top: 40vh;
 }
 
 #footer-text {
-  width: 30%;
-  float: left;
-  margin-left: 5%;
+    width: 30%;
+    float: left;
+    margin-left: 5%;
 }
+
 #footer-devs {
-  width: 30%;
-  float: right;
+    width: 30%;
+    float: right;
 }
+
 #footer-text p,
 #footer-devs p,
 #footer-devs ul li {
-  color: #fff;
+    color: #fff;
 }
+
+#FooterLogo {
+    display: inline-block;
+    width: none;
+    float: none;
+    margin-left: 5px;
+}
+
 
 /* ----- Eventi Introduction Content ----- */
+
 #left-side-details {
-  width: 45%;
-  float: left;
+    width: 45%;
+    float: left;
 }
+
 #right-side-details {
-  width: 45%;
-  float: right;
+    width: 45%;
+    float: right;
 }
+
 #logged-in-account-info {
-  margin-top: 40px;
-  background-color: #d2dad5;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
+    margin-top: 40px;
+    background-color: #d2dad5;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px grey;
 }
+
 #logged-in-account-info #info-head {
-  font-size: 36px;
-  font-family: "Exo 2", sans-serif;
-  padding-left: 10px;
+    font-size: 36px;
+    font-family: "Exo 2", sans-serif;
+    padding-left: 10px;
 }
+
 #logged-in-account-info #email {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
+    font-size: 16px;
+    font-family: "Catamaran", sans-serif;
+    padding-left: 10px;
 }
+
 #logged-in-account-info #bio {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
+    font-size: 16px;
+    font-family: "Catamaran", sans-serif;
+    padding-left: 10px;
 }
+
 #logged-in-account-info #verif {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
-  padding-bottom: 10px;
+    font-size: 16px;
+    font-family: "Catamaran", sans-serif;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
+
 #logged-in-intro {
-  margin-top: 40px;
-  background-color: #d2dad5;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
+    margin-top: 40px;
+    background-color: #d2dad5;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px grey;
 }
+
 #intro-content {
-  padding-left: 10px;
+    padding-left: 10px;
 }
+
 #intro-content h3 {
-  padding-top: 10px;
-  font-size: 36px;
-  font-family: "Exo 2", sans-serif;
+    padding-top: 10px;
+    font-size: 36px;
+    font-family: "Exo 2", sans-serif;
 }
+
 #intro-content h5 {
-  font-size: 22px;
-  font-family: "Exo 2", sans-serif;
+    font-size: 22px;
+    font-family: "Exo 2", sans-serif;
 }
+
 #intro-content p {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
+    font-size: 16px;
+    font-family: "Catamaran", sans-serif;
 }
+
 #intro-content ul {
-  font-family: "Catamaran", sans-serif;
+    font-family: "Catamaran", sans-serif;
 }
+
 #create-event-on-page {
-  margin-top: 40px;
-  background-color: #d2dad5;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
-  text-align: center;
+    margin-top: 40px;
+    background-color: #d2dad5;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px grey;
+    text-align: center;
 }
+
 #create-event-on-page div {
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 #create-event-on-page a {
-  font-size: 36px;
-  font-family: "Exo 2", sans-serif;
+    font-size: 36px;
+    font-family: "Exo 2", sans-serif;
 }
+
+
 /* ----- End Eventi Introduction Content ----- */
 
+
 /* ----- Welcome Content -----  */
+
 #welcome-title {
-  background-color: #494e6b;
-  width: 35%;
-  margin-left: 32.5%;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px rgb(65, 65, 65);
+    background-color: #494e6b;
+    width: 35%;
+    margin-left: 32.5%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
+
 #welcome-title h2 {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  font-family: "Exo 2", sans-serif;
-  font-size: 5rem;
-  color: #fdf8f5;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: "Exo 2", sans-serif;
+    font-size: 5rem;
+    color: #fdf8f5;
 }
+
 #welcome-info {
-  background-color: #494e6b;
-  width: 60%;
-  margin-left: 20%;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px rgb(65, 65, 65);
+    background-color: #494e6b;
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
+
 #welcome-info p {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 25px 25px 25px 25px;
-  font-family: "Catamaran", sans-serif;
-  font-size: 2rem;
-  color: #fdf8f5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 25px 25px 25px 25px;
+    font-family: "Catamaran", sans-serif;
+    font-size: 2rem;
+    color: #fdf8f5;
 }
+
+
 /* ----- End Welcome Content -----  */
 
 @media all and (max-width: 500px) {
-  /* ----- Logged In Items ----- */
-  #logged-in-content {
-    width: 100%;
-  }
-  #left-side-details {
-    float: none;
-    width: 95%;
-    padding-left: 2.5%;
-  }
-  #right-side-details {
-    float: none;
-    width: 100%;
-  }
-  /* ----- Logged Out Items ----- */
-  #welcome-title {
-    width: 90%;
-    margin-left: 5%;
-  }
-  #welcome-title h2 {
-    font-size: 2.8rem;
-  }
-  #welcome-info {
-    width: 85%;
-    margin-left: 7.5%;
-  }
-  #welcome-info p {
-    font-size: 1.5rem;
-  }
-
-  /* ----- Slider Details ----- */
-  .slide-content span {
-    font-family: "Exo 2", sans-serif;
-    font-size: 2rem;
-    color: #fff;
-  }
+    /* ----- Logged In Items ----- */
+    #logged-in-content {
+        width: 100%;
+    }
+    #left-side-details {
+        float: none;
+        width: 95%;
+        padding-left: 2.5%;
+    }
+    #right-side-details {
+        float: none;
+        width: 100%;
+    }
+    /* ----- Logged Out Items ----- */
+    #welcome-title {
+        width: 90%;
+        margin-left: 5%;
+    }
+    #welcome-title h2 {
+        font-size: 2.8rem;
+    }
+    #welcome-info {
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    #welcome-info p {
+        font-size: 1.5rem;
+    }
+    /* ----- Slider Details ----- */
+    .slide-content span {
+        font-family: "Exo 2", sans-serif;
+        font-size: 2rem;
+        color: #fff;
+    }
 }
 
 @media all and (max-width: 810px) {
-  /* ----- Logged Out Items ----- */
-  #welcome-title {
-    width: 80%;
-    margin-left: 10%;
-  }
-  #welcome-info {
-    width: 70%;
-    margin-left: 15%;
-  }
+    /* ----- Logged Out Items ----- */
+    #welcome-title {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #welcome-info {
+        width: 70%;
+        margin-left: 15%;
+    }
 }

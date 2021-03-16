@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +22,7 @@
     </style>
 
 </head>
+
 <body>
 
     <!--Nav bar-->
@@ -31,18 +33,18 @@
             </a>
             <ul id="nav-mobile">
 
-                <li class="logged-out" id="nav-item" style:"display: none;">
+                <li class="logged-out" id="nav-item" style: "display: none;">
                     <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
                 </li>
 
-                <li class="logged-out" id="nav-item" style:"display: none;">
+                <li class="logged-out" id="nav-item" style: "display: none;">
                     <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
                 </li>
 
-                <li class="logged-in" id="nav-item" style:"display: none;">
+                <li class="logged-in" id="nav-item" style: "display: none;">
                     <a href="#" id="logout">Logout</a>
                 </li>
-                
+
             </ul>
         </div>
     </nav>
@@ -137,7 +139,7 @@
                 <div class="input-field">
                     <input type="datetime-local" id="Date" name="eventTime">
                 </div>
-            
+
                 <button class="btn grey darken-3 z-depth-0">Create Event</button>
             </form>
         </div>
@@ -182,7 +184,7 @@
                 <div class="input-field">
                     <input type="datetime-local" id="edit-Date" name="eventTime">
                 </div>
-                
+
                 <button class="btn grey darken-3 z-depth-0">Update Event</button>
             </form>
         </div>
@@ -195,14 +197,14 @@
                 <br />
                 <div id="left-side-details">
                     <div id="logged-in-account-info">
-                            
+
                     </div>
                     <div id="logged-in-intro">
-                        
+
                         <div id="intro-content">
                             <h3>Welcome to Eventi.</h3>
-                                <h5>This is your Eventi. dashboard.</h5><br />
-                                <p><strong>From here you can: </strong></p>
+                            <h5>This is your Eventi. dashboard.</h5><br />
+                            <p><strong>From here you can: </strong></p>
                             <ul>
                                 <li> - Create new events</li>
                                 <li> - View your account information</li>
@@ -221,16 +223,16 @@
                         </div>
                     </div>
                     <div id="logged-in-events">
-                        
+
                         <h5 style="color: #0d1321; text-align: center; font-family: 'Exo 2', sans-serif; padding-top: 30px;">Your Events:</h5>
                         <ul class="collapsible popout z-depth-0 events" style="border: none; margin-top: 30px;">
                         </ul>
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <div id="logged-out-content">
 
             <div class="wrap">
@@ -278,22 +280,17 @@
 
             <div id="welcome-info">
                 <p>
-                    Eventi. is a simple, yet robust, event planning website. 
-                    Eventi. has been developed as a display of the skills learned by the group, 
-                    with goals of creating a fluid event planning website to be used by individuals
-                    looking to keep track of some of the events in their lives; such as going out 
-                    for dinner with a group of friends, noting the time and place of a family gathering, 
-                    and scheduling meetings with fellow employees, just to name a few. We hope that you 
-                    can find Eventi. useful in some way, and that our time and effort that has been put
-                    into this project shows in our work.
+                    Eventi. is a simple, yet robust, event planning website. Eventi. has been developed as a display of the skills learned by the group, with goals of creating a fluid event planning website to be used by individuals looking to keep track of some of the events
+                    in their lives; such as going out for dinner with a group of friends, noting the time and place of a family gathering, and scheduling meetings with fellow employees, just to name a few. We hope that you can find Eventi. useful in some
+                    way, and that our time and effort that has been put into this project shows in our work.
                 </p>
             </div>
 
             <!-- <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div> -->
-            
-            
+
+
         </div>
-        
+
         <!-- <footer class="page-footer">
             <div class="container">
             <div class="row">
@@ -312,9 +309,13 @@
             </div>
         </footer> -->
     </div>
-    <footer>
+    <footer>&copy;Copyright 2021 EvenTI
+        <!--Footer Logo-->
+        <div id="FooterLogo">
+            <img src="img/EvenTI-logos_white.png" width="200" height="240">
+        </div>
         <div id="footer-text">
-            <p>Thank you for using Eventi</p>
+            <p>Thank you for using EvenTI</p>
         </div>
         <div id="footer-devs">
             <p>Developed By: </p>
@@ -357,12 +358,13 @@
         // db.settings({ timestampsInSnapshots: true});
     </script>
 
-    
-    
+
+
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/placesSearch.js"></script>
     <script src="scripts/welcomeSlider.js"></script>
-    
+
 </body>
+
 </html>
