@@ -8,7 +8,12 @@ if("serviceWorker" in navigator){
         console.log(error);
     });
 }
-
+$(document).ready(function() {
+    $('#calendar').evoCalendar({
+        'theme': 'Midnight Blue',
+        'sidebarDisplayDefault': false
+    })
+})
 
 
 
@@ -74,6 +79,7 @@ auth.onAuthStateChanged(user => {
 
 // Allows user to delete events, no confirmation is offered to user, might add in the future
 function deleteEvent(ev) {
+    $('#calendar').evoCalendar('removeCalendarEvent', ev);
     db.collection('events').doc(ev).delete();
     window.alert("Event successfully deleted.")
 }
@@ -223,6 +229,9 @@ const setupEvents = (data) => {
                 `;
                 
                 html += li;
+
+                
+
                 $("#calendar").evoCalendar('addCalendarEvent', [
                     {
                         id: eventId,
@@ -280,11 +289,5 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('select').formSelect();
 });
-$(document).ready(function() {
-    $('#calendar').evoCalendar({
-        'theme': 'Midnight Blue',
-        'sidebarDisplayDefault': false
-    })
-})
 
 
