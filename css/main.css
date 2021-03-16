@@ -282,6 +282,7 @@ footer {
   background-color: #d2dad5;
   border-radius: 15px;
   box-shadow: 10px 10px 5px grey;
+  margin-bottom: 50px;
 }
 #intro-content {
   padding-left: 10px;
@@ -317,6 +318,10 @@ footer {
   font-size: 36px;
   font-family: "Exo 2", sans-serif;
 }
+#calendar {
+  font-family: "Catamaran", sans-serif;
+}
+
 /* ----- End Eventi Introduction Content ----- */
 
 /* ----- Welcome Content -----  */

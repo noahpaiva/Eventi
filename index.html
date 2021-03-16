@@ -3,17 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Exo+2&display=swap" rel="stylesheet">
+
+    <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- Calendar CSS -->
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.midnight-blue.css"/>
     <link rel="manifest" href="manifest.json">
     <title>Eventi - Plan it!</title>
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
 
+    <!-- Google Places CSS -->
     <style>
         .pac-container {
             z-index: 10000 !important;
@@ -226,7 +239,10 @@
                         <ul class="collapsible popout z-depth-0 events" style="border: none; margin-top: 30px;">
                         </ul>
                     </div>
+                    <br />
+                    
                 </div>
+                <div id="calendar"></div>
             </div>
             
         </div>
@@ -363,6 +379,7 @@
     <script src="scripts/index.js"></script>
     <script src="scripts/placesSearch.js"></script>
     <script src="scripts/welcomeSlider.js"></script>
+    <script src="scripts/evo-calendar.js"></script>
     
 </body>
 </html>

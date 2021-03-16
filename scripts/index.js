@@ -223,6 +223,15 @@ const setupEvents = (data) => {
                 `;
                 
                 html += li;
+                $("#calendar").evoCalendar('addCalendarEvent', [
+                    {
+                        id: eventId,
+                        name: event.Title,
+                        date: thisDate,
+                        type: cat,
+                        everyYear: false
+                    }
+                ]);
                 
             }
         });
@@ -271,5 +280,11 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('select').formSelect();
 });
+$(document).ready(function() {
+    $('#calendar').evoCalendar({
+        'theme': 'Midnight Blue',
+        'sidebarDisplayDefault': false
+    })
+})
 
 
