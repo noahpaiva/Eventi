@@ -129,12 +129,12 @@
                 <div class="input-field col s12">
                     <select id="Category">
                         <option value="" disabled selected>Event Category</option>
-                        <option value="personal">Personal</option>
-                        <option value="business">Business</option>
-                        <option value="outdoors">Outdoor</option>
-                        <option value="social">Social</option>
-                        <option value="family">Family</option>
-                        <option value="other">Other</option>
+                        <option value="personal" id="create-personal">Personal</option>
+                        <option value="business" id="create-business">Business</option>
+                        <option value="outdoors" id="create-outdoors">Outdoor</option>
+                        <option value="social" id="create-social">Social</option>
+                        <option value="family" id="create-family">Family</option>
+                        <option value="other" id="create-other">Other</option>
                     </select>
                     <!-- <label>Materialize Select</label> -->
                 </div>
@@ -180,7 +180,6 @@
                         <option value="family">Family</option>
                         <option value="other">Other</option>
                     </select>
-                    <!-- <label>Materialize Select</label> -->
                 </div>
                 <div class="input-field">
                     <textarea id="edit-Desc" class="materialize-textarea" required></textarea>
@@ -211,24 +210,35 @@
             <div id="logged-in-content">
                 <br />
                 <div id="event-create-buttons">
-                    <div id="personal-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Personal</a>
+                    <div id="dashboard-head">
+                        <h2>Eventi. Dashboard</h2>
                     </div>
-                    <div id="business-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Business</a>
+
+                    <h4 id="h4-create-category">Choose a category below to create an event</h4>
+                    <div id="left-side-create">
+                        <div id="personal-create">
+                            <img src="img/Personal.png" onclick="setPersonal()" alt="personal event" class="modal-trigger" data-target="modal-create">
+                        </div>
+                        <div id="business-create">
+                            <img src="img/Business.png" alt="business event" class="modal-trigger" data-target="modal-create" onclick="setBusiness()">
+                        </div>
+                        <div id="outdoors-create">
+                            <img src="img/Outdoor.png" alt="outdoor event" class="modal-trigger" data-target="modal-create" onclick="setOutdoors()">
+                        </div>
                     </div>
-                    <div id="outdoors-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Outdoors</a>
+
+                    <div id="right-side-create">
+                        <div id="social-create">
+                            <img src="img/Social.png" alt="social event" class="modal-trigger" data-target="modal-create" onclick="setSocial()">
+                        </div>
+                        <div id="family-create">
+                            <img src="img/Family.png" alt="family event" class="modal-trigger" data-target="modal-create" onclick="setFamily()">
+                        </div>
+                        <div id="other-create">
+                            <img src="img/Other.png" alt="other event" class="modal-trigger" data-target="modal-create" onclick="setOther()">
+                        </div>
                     </div>
-                    <div id="social-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Social</a>
-                    </div>
-                    <div id="family-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Family</a>
-                    </div>
-                    <div id="other-create">
-                        <a href="#" class="modal-trigger" data-target="modal-create">Other</a>
-                    </div>
+
                 </div>
                 <div id="left-side-details">
                     <div id="logged-in-account-info">
@@ -237,15 +247,14 @@
                     <div id="logged-in-intro">
 
                         <div id="intro-content">
-                            <h3>Welcome to Eventi.</h3>
-                            <h5>This is your Eventi. dashboard.</h5><br />
-                            <p><strong>From here you can: </strong></p>
+                            <h5>Dashboard Tools</h5>
                             <ul>
                                 <li> - Create new events</li>
                                 <li> - View your account information</li>
                                 <li> - Verify your email (if you have not already)</li>
                                 <li> - Browse your current events</li>
                                 <li> - Delete and edit your events</li>
+                                <li> - View your events in the calendar</li>
                             </ul>
                             <br />
                         </div>
@@ -253,13 +262,13 @@
                 </div>
                 <div id="right-side-details">
                     <div id="create-event-on-page">
-                        <div>
+                        <!-- <div>
                             <a href="#" class="modal-trigger" data-target="modal-create">Create Event</a>
-                        </div>
+                        </div> -->
                     </div>
                     <div id="logged-in-events">
 
-                        <h5 style="color: #0d1321; text-align: center; font-family: 'Exo 2', sans-serif; padding-top: 30px;">Your Events:</h5>
+                        <h5 style="color: #0d1321; text-align: center; font-family: 'Exo 2', sans-serif;">Your Events:</h5>
                         <ul class="collapsible popout z-depth-0 events" style="border: none; margin-top: 30px;">
                         </ul>
                     </div>
@@ -324,28 +333,7 @@
                 </p>
             </div>
 
-            <!-- <div style="height: 500px;background-image: url(https://2lkcp81qv9i72rn88i4dfqq1-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/iStock-469108108.jpg);background-position: center;background-size: cover;"></div> -->
-
-
         </div>
-
-        <!-- <footer class="page-footer">
-            <div class="container">
-            <div class="row">
-                <div style="float: left;">
-                <h5 class="white-text">Thank you for visiting Eventi.</h5>
-                </div>
-                <div style="float: right;">
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Developed by:</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Noah Paiva</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Holly Bernich</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Veronica Marquez</a></li>
-                </ul>
-                </div>
-            </div>
-            </div>
-        </footer> -->
     </div>
     <footer>&copy;Copyright 2021 EvenTI
         <!--Footer Logo-->
@@ -386,7 +374,7 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+        // firebase.analytics();
 
         //make auth and firestore references
         const auth = firebase.auth();

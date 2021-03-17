@@ -15,7 +15,30 @@ $(document).ready(function() {
     })
 })
 
-
+function setPersonal() {
+    document.getElementById("create-personal").selected = "true";
+    $('#Category').formSelect();
+}
+function setBusiness() {
+    document.getElementById("create-business").selected = "true";
+    $('#Category').formSelect();
+}
+function setOutdoors() {
+    document.getElementById("create-outdoors").selected = "true";
+    $('#Category').formSelect();
+}
+function setSocial() {
+    document.getElementById("create-social").selected = "true";
+    $('#Category').formSelect();
+}
+function setFamily() {
+    document.getElementById("create-family").selected = "true";
+    $('#Category').formSelect();
+}
+function setOther() {
+    document.getElementById("create-other").selected = "true";
+    $('#Category').formSelect();
+}
 
 
 // Pulls data from Firestore 'events' database
@@ -37,8 +60,7 @@ const setupUI = (user) => {
         // Show Account info
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `
-                <div id="info-head">Account Details</div>
-                <div id="email">Logged in as ${user.email}</div>
+                <div id="email">You are logged in as ${user.email}</div>
                 <div id="bio">${doc.data().bio}</div>
                 <div id="verif">Email Verified: ${user.emailVerified}</div>
             `;
@@ -103,6 +125,7 @@ function getEvent(ev) {
             var thisEvent = doc.data();
             document.getElementById('edit-Title').value = thisEvent.Title;
             document.getElementById('edit-Category').value = thisEvent.Category;
+            $('#edit-Category').formSelect();
             document.getElementById('edit-Desc').value = thisEvent.Desc;
             document.getElementById("edit_search_input").value = thisEvent.Location;
 
@@ -213,7 +236,7 @@ const setupEvents = (data) => {
                                 ${event.Title}
                             </strong>
                         </div>
-                        <div class="collapsible-body light orange lighten-5 z-depth-0" id="event-content">
+                        <div class="collapsible-body light z-depth-0" id="event-content">
                             Category: ${cat} <br />
                             ${event.Desc} <br />
                             ${thisDate} <br />
