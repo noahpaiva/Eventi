@@ -391,15 +391,11 @@ footer {
   background-color: #d2dad5;
   border-radius: 15px;
   box-shadow: 10px 10px 5px grey;
+  text-align: center;
 }
 #dashboard-head h2 {
   padding-top: 2%;
   padding-bottom: 2%;
-  font-family: "Exo 2", sans-serif;
-}
-
-#h4-create-category {
-  font-size: 26px;
   font-family: "Exo 2", sans-serif;
 }
 
@@ -408,18 +404,26 @@ footer {
   padding-top: 2%;
   text-align: center;
 }
+
+#h4-create-category {
+  font-size: 26px;
+  font-family: "Exo 2", sans-serif;
+}
+
 #event-create-buttons div {
   width: 100%;
 }
 
-#left-side-create div,
-#right-side-create div {
+#row1-create div,
+#row2-create div,
+#row3-create div {
   display: inline-block;
   background-color: #192231;
-  width: 30%;
+  width: 40%;
   height: 15vh;
   border-radius: 15px;
 }
+
 #personal-create img,
 #business-create img,
 #outdoors-create img,
