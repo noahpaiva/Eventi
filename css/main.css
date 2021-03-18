@@ -78,16 +78,6 @@ font-family: 'Exo 2', sans-serif;
   font-family: "Catamaran", sans-serif;
 }
 
-#email {
-  font-size: 22px;
-}
-#bio {
-  font-size: 20px;
-}
-#verif {
-  font-size: 14px;
-}
-
 /* ----- End Account Modal Info ----- */
 
 /* ----- Create Event Modal CSS ----- */
@@ -287,6 +277,32 @@ footer {
   float: none;
   margin-left: 5px;
 }
+/* ----- Account Info ----- */
+
+#account-info-left {
+  width: 45%;
+  float: left;
+}
+#account-img {
+  padding-bottom: 20px;
+}
+#account-info-right {
+  width: 45%;
+  float: right;
+}
+#email {
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+#bio {
+  font-size: 20px;
+  padding-bottom: 6px;
+}
+#verif {
+  font-size: 14px;
+}
+
+/* ----- END Account Info ----- */
 
 /* ----- Eventi Introduction Content ----- */
 
@@ -298,71 +314,6 @@ footer {
 #right-side-details {
   width: 45%;
   float: right;
-}
-
-#logged-in-account-info {
-  margin-top: 40px;
-  background-color: #d2dad5;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
-}
-
-#logged-in-account-info #info-head {
-  font-size: 36px;
-  font-family: "Exo 2", sans-serif;
-  padding-left: 10px;
-}
-
-#logged-in-account-info #email {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
-}
-
-#logged-in-account-info #bio {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
-}
-
-#logged-in-account-info #verif {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-
-#logged-in-intro {
-  margin-top: 40px;
-  background-color: #d2dad5;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px grey;
-  margin-bottom: 50px;
-}
-
-#intro-content {
-  padding-left: 10px;
-}
-
-#intro-content h3 {
-  padding-top: 10px;
-  font-size: 36px;
-  font-family: "Exo 2", sans-serif;
-}
-
-#intro-content h5 {
-  padding-top: 5%;
-  font-size: 22px;
-  font-family: "Exo 2", sans-serif;
-}
-
-#intro-content p {
-  font-size: 16px;
-  font-family: "Catamaran", sans-serif;
-}
-
-#intro-content ul {
-  font-family: "Catamaran", sans-serif;
 }
 
 #create-event-on-page {
@@ -402,6 +353,7 @@ footer {
 #event-create-buttons {
   width: 100%;
   padding-top: 2%;
+  padding-bottom: 5%;
   text-align: center;
 }
 
@@ -419,7 +371,7 @@ footer {
 #row3-create div {
   display: inline-block;
   background-color: #192231;
-  width: 40%;
+  width: 45%;
   height: 15vh;
   border-radius: 15px;
 }
@@ -500,8 +452,16 @@ footer {
   #social-create img,
   #family-create img,
   #other-create img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+  }
+  #account-info-left {
+    width: 90%;
+    float: none;
+  }
+  #account-info-right {
+    width: 90%;
+    padding-left: 5%;
+    float: none;
   }
   /* ----- Logged Out Items ----- */
   #welcome-title {
