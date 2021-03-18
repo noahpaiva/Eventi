@@ -47,3 +47,11 @@ function startSlide() {
   
   startSlide();
   
+  function loopPics() {
+    if (current === sliderImages.length - 1) {
+      current = -1;
+    }
+    slideRight();
+  }
+
+  var timer = setInterval(loopPics, 6000);
