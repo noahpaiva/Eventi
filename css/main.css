@@ -417,7 +417,7 @@ footer {
   display: inline-block;
   background-color: #192231;
   width: 30%;
-  height: 80px;
+  height: 15vh;
   border-radius: 15px;
 }
 #personal-create img,
@@ -489,6 +489,15 @@ footer {
   #h4-create-category {
     font-size: 22px;
     font-family: "Exo 2", sans-serif;
+  }
+  #personal-create img,
+  #business-create img,
+  #outdoors-create img,
+  #social-create img,
+  #family-create img,
+  #other-create img {
+    width: 100%;
+    height: auto;
   }
   /* ----- Logged Out Items ----- */
   #welcome-title {
