@@ -209,63 +209,42 @@
         <div class="container" id="event-container">
             <div id="logged-in-content">
                 <br />
-                <div id="event-create-buttons">
-                    <div id="dashboard-head">
-                        <h2>Eventi. Dashboard</h2>
-                    </div>
 
-                    <h4 id="h4-create-category">Choose a category below to create an event</h4>
-                    <div id="left-side-create">
-                        <div id="personal-create">
-                            <img src="img/Personal.png" onclick="setPersonal()" alt="personal event" class="modal-trigger" data-target="modal-create">
-                        </div>
-                        <div id="business-create">
-                            <img src="img/Business.png" alt="business event" class="modal-trigger" data-target="modal-create" onclick="setBusiness()">
-                        </div>
-                        <div id="outdoors-create">
-                            <img src="img/Outdoor.png" alt="outdoor event" class="modal-trigger" data-target="modal-create" onclick="setOutdoors()">
-                        </div>
-                    </div>
-
-                    <div id="right-side-create">
-                        <div id="social-create">
-                            <img src="img/Social.png" alt="social event" class="modal-trigger" data-target="modal-create" onclick="setSocial()">
-                        </div>
-                        <div id="family-create">
-                            <img src="img/Family.png" alt="family event" class="modal-trigger" data-target="modal-create" onclick="setFamily()">
-                        </div>
-                        <div id="other-create">
-                            <img src="img/Other.png" alt="other event" class="modal-trigger" data-target="modal-create" onclick="setOther()">
-                        </div>
-                    </div>
-
+                <div id="dashboard-head">
+                    <h2>Dashboard</h2>
                 </div>
+                
                 <div id="left-side-details">
-                    <div id="logged-in-account-info">
-
-                    </div>
-                    <div id="logged-in-intro">
-
-                        <div id="intro-content">
-                            <h5>Dashboard Tools</h5>
-                            <ul>
-                                <li> - Create new events</li>
-                                <li> - View your account information</li>
-                                <li> - Verify your email (if you have not already)</li>
-                                <li> - Browse your current events</li>
-                                <li> - Delete and edit your events</li>
-                                <li> - View your events in the calendar</li>
-                            </ul>
-                            <br />
+                    <div id="event-create-buttons">
+    
+                        <h4 id="h4-create-category">Choose a category below to create an event</h4>
+                        <div id="row1-create">
+                            <div id="personal-create">
+                                <img src="img/Personal.png" onclick="setPersonal()" alt="personal event" class="modal-trigger" data-target="modal-create">
+                            </div>
+                            <div id="business-create">
+                                <img src="img/Business.png" alt="business event" class="modal-trigger" data-target="modal-create" onclick="setBusiness()">
+                            </div>
+                        </div>
+                        <div id="row2-create">
+                            <div id="outdoors-create">
+                                <img src="img/Outdoor.png" alt="outdoor event" class="modal-trigger" data-target="modal-create" onclick="setOutdoors()">
+                            </div>
+                            <div id="social-create">
+                                <img src="img/Social.png" alt="social event" class="modal-trigger" data-target="modal-create" onclick="setSocial()">
+                            </div>
+                        </div>
+                        <div id="row3-create">
+                            <div id="family-create">
+                                <img src="img/Family.png" alt="family event" class="modal-trigger" data-target="modal-create" onclick="setFamily()">
+                            </div>
+                            <div id="other-create">
+                                <img src="img/Other.png" alt="other event" class="modal-trigger" data-target="modal-create" onclick="setOther()">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="right-side-details">
-                    <div id="create-event-on-page">
-                        <!-- <div>
-                            <a href="#" class="modal-trigger" data-target="modal-create">Create Event</a>
-                        </div> -->
-                    </div>
                     <div id="logged-in-events">
 
                         <h5 style="color: #0d1321; text-align: center; font-family: 'Exo 2', sans-serif;">Your Events:</h5>

@@ -60,9 +60,17 @@ const setupUI = (user) => {
         // Show Account info
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `
+            <div id="account-info-left">
+                <div id="account-img">
+                    <img src="../img/user.png">
+                </div>
+            </div>
+            <div id="account-info-right">
                 <div id="email">You are logged in as ${user.email}</div>
                 <div id="bio">${doc.data().bio}</div>
                 <div id="verif">Email Verified: ${user.emailVerified}</div>
+            </div>
+                
             `;
             accountDetails.innerHTML = html;
         })
