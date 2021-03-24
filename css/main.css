@@ -448,6 +448,15 @@ footer {
   border-radius: 15px;
 }
 
+#personal-create,
+#business-create,
+#outdoors-create,
+#social-create,
+#family-create,
+#other-create {
+  box-shadow: 10px 10px 5px rgb(70, 70, 70);
+}
+
 #personal-create img,
 #business-create img,
 #outdoors-create img,
@@ -455,6 +464,7 @@ footer {
 #family-create img,
 #other-create img {
   height: 100%;
+  cursor: pointer;
 }
 
 /* ----- End Eventi Introduction Content ----- */
