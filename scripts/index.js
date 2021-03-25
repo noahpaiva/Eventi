@@ -1,14 +1,14 @@
 // Service worker implementation
-if("serviceWorker" in navigator){
+if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("SW Registered!");
         console.log(registration);
-}).catch(error => {
+    }).catch(error => {
         console.log("SW Registration failed!");
         console.log(error);
     });
 }
-$(document).ready(function() {
+$(document).ready(function () {
     $('#calendar').evoCalendar({
         'theme': 'Midnight Blue',
         'sidebarDisplayDefault': false
@@ -55,8 +55,8 @@ const accountDetails = document.querySelector('.account-details');
 
 // Changes nav bar buttons depending on log in status
 const setupUI = (user) => {
-    
-    if(user) {
+
+    if (user) {
         // Show Account info
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `
@@ -138,7 +138,7 @@ function getEvent(ev) {
             document.getElementById("edit_search_input").value = thisEvent.Location;
 
             var evDate = thisEvent.Date.toDate().toISOString();
-            document.getElementById("edit-Date").value = evDate.substring(0,evDate.length-1);
+            document.getElementById("edit-Date").value = evDate.substring(0, evDate.length - 1);
         }
         else {
             console.log("no such document");
@@ -181,12 +181,12 @@ editForm.addEventListener('submit', (e) => {
 function send_verification() {
     var user = firebase.auth().currentUser;
 
-    user.sendEmailVerification().then(function() {
+    user.sendEmailVerification().then(function () {
         // Email sent
 
         window.alert("verification Sent!");
 
-    }).catch(function(error) {
+    }).catch(function (error) {
         // An error has occured
 
         window.alert("Error: " + error.message);
@@ -199,7 +199,7 @@ function send_verification() {
 const setupEvents = (data) => {
 
     // Checks if data exists for an event
-    if(data.length) {
+    if (data.length) {
         document.getElementById("logged-out-content").style.display = "none";
         document.getElementById("logged-in-content").style.display = "block";
         let html = '';
@@ -207,13 +207,13 @@ const setupEvents = (data) => {
             const event = doc.data();
             let eventId = doc.id;
             // console.log(event); - only used for debugging
-            if(userEmail == event.admin) {
+            if (userEmail == event.admin) {
                 var thisDate = event.Date.toDate();
                 var loc = event.Location.replace(/\s/g, '+');
                 loc.replace(/,/g, '%2C');
                 var cat;
                 var icon;
-                if(event.Category == "personal") {
+                if (event.Category == "personal") {
                     cat = "Personal";
                     icon = "face";
                 } else if (event.Category == "business") {
@@ -255,10 +255,10 @@ const setupEvents = (data) => {
                         </div>
                     </li>
                 `;
-                
+
                 html += li;
 
-                
+
 
                 $("#calendar").evoCalendar('addCalendarEvent', [
                     {
@@ -269,20 +269,20 @@ const setupEvents = (data) => {
                         everyYear: false
                     }
                 ]);
-                
+
             }
         });
 
         // IF USER EMAIL IS NOT VERIFIED, SHOW BUTTON TO SEND VERIFICATION EMAIL
-        if(!userVerif) {
+        if (!userVerif) {
             let emailButton = `
-                <div>
+                <div id="verifButton-div">
                     <button class="btn grey darken-3 z-depth-0" id="verifButton" onclick="send_verification()">Verify Email</button>
                 </div>
             `;
-        html += emailButton;
+            html += emailButton;
         }
-        
+
         eventList.innerHTML = html;
     }
     // IF NO USER IS LOGGED IN
@@ -292,15 +292,15 @@ const setupEvents = (data) => {
         document.getElementById("logged-in-content").style.display = "none";
         document.getElementById("logged-out-content").style.display = "block";
         eventList.innerHTML = li;
-        
-    }   
+
+    }
 }
 
 
 
 // Allows for events to be collapsible modals
-document.addEventListener('DOMContentLoaded', function() {
-    
+document.addEventListener('DOMContentLoaded', function () {
+
     var modals = document.querySelectorAll('.modal');
     M.Modal.init(modals);
 
@@ -308,13 +308,13 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Collapsible.init(items);
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.carousel').carousel({
         indicators: true
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('select').formSelect();
 });
 
