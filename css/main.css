@@ -250,6 +250,9 @@ body,
 
 .tst-wrap {
   position: relative;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 15px;
 }
 .tst {
   background-size: cover;
@@ -505,6 +508,7 @@ footer {
   background-color: #494e6b;
   width: 60%;
   margin-left: 20%;
+  margin-bottom: 5%;
   border-radius: 15px;
   box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
@@ -516,6 +520,21 @@ footer {
   font-family: "Catamaran", sans-serif;
   font-size: 2rem;
   color: #fdf8f5;
+}
+
+.about-us-div {
+  margin-top: 4%;
+  margin-left: 30%;
+  padding: 3% 3%;
+  background-color: #192231;
+  width: 40%;
+  text-align: center;
+  border-radius: 15px;
+}
+#about-us-trigger {
+  cursor: pointer;
+  font-size: 42px;
+  font-family: "Exo 2", sans-serif;
 }
 
 /* ----- End Welcome Content -----  */

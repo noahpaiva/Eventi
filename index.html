@@ -25,8 +25,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAbbaT4gRFlmjLTdTepozp5A7-qQRs55zg"></script>
 
     <!-- Google Places CSS -->
     <style>
@@ -117,6 +116,17 @@
             <div class="account-details"></div>
         </div>
     </div>
+
+    <!-- About Us Modal-->
+    <div id="modal-aboutus" class="modal">
+        <div class="modal-content">
+            <h4>About Us</h4><br />
+            <form id="about-us">
+                <button class="btn grey darken-3 z-depth-0">About-Us</button>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Create Event Modal-->
     <div id="modal-create" class="modal">
@@ -221,53 +231,26 @@
                         <h4 id="h4-create-category">Choose a category below to create an event</h4>
                         <div id="row1-create">
                             <div id="personal-create">
-<<<<<<< HEAD
                                 <img src="img/Personal3.png" onclick="setPersonal()" alt="personal event" class="modal-trigger" data-target="modal-create">
                             </div>
                             <div id="business-create">
                                 <img src="img/Business3.png" alt="business event" class="modal-trigger" data-target="modal-create" onclick="setBusiness()">
-=======
-                                <img src="img/Personal2.png" onclick="setPersonal()" alt="personal event"
-                                    class="modal-trigger" data-target="modal-create">
-                            </div>
-                            <div id="business-create">
-                                <img src="img/Business2.png" alt="business event" class="modal-trigger"
-                                    data-target="modal-create" onclick="setBusiness()">
->>>>>>> d04881eb1e6ebf2a39179bc273625d52a9462e8d
                             </div>
                         </div>
                         <div id="row2-create">
                             <div id="outdoors-create">
-<<<<<<< HEAD
                                 <img src="img/Outdoor3.png" alt="outdoor event" class="modal-trigger" data-target="modal-create" onclick="setOutdoors()">
                             </div>
                             <div id="social-create">
                                 <img src="img/Social3.png" alt="social event" class="modal-trigger" data-target="modal-create" onclick="setSocial()">
-=======
-                                <img src="img/Outdoor2.png" alt="outdoor event" class="modal-trigger"
-                                    data-target="modal-create" onclick="setOutdoors()">
-                            </div>
-                            <div id="social-create">
-                                <img src="img/Social2.png" alt="social event" class="modal-trigger"
-                                    data-target="modal-create" onclick="setSocial()">
->>>>>>> d04881eb1e6ebf2a39179bc273625d52a9462e8d
                             </div>
                         </div>
                         <div id="row3-create">
                             <div id="family-create">
-<<<<<<< HEAD
                                 <img src="img/Family3.png" alt="family event" class="modal-trigger" data-target="modal-create" onclick="setFamily()">
                             </div>
                             <div id="other-create">
                                 <img src="img/Other3.png" alt="other event" class="modal-trigger" data-target="modal-create" onclick="setOther()">
-=======
-                                <img src="img/Family2.png" alt="family event" class="modal-trigger"
-                                    data-target="modal-create" onclick="setFamily()">
-                            </div>
-                            <div id="other-create">
-                                <img src="img/Other2.png" alt="other event" class="modal-trigger"
-                                    data-target="modal-create" onclick="setOther()">
->>>>>>> d04881eb1e6ebf2a39179bc273625d52a9462e8d
                             </div>
                         </div>
                     </div>
@@ -335,12 +318,8 @@
 
             <div id="welcome-info">
                 <p>
-                    Eventi. is a simple, yet robust, event planning website. Eventi. has been developed as a display of
-                    the skills learned by the group, with goals of creating a fluid event planning website to be used by
-                    individuals looking to keep track of some of the events
-                    in their lives; such as going out for dinner with a group of friends, noting the time and place of a
-                    family gathering, and scheduling meetings with fellow employees, just to name a few. We hope that
-                    you can find Eventi. useful in some
+                    Eventi. is a simple, yet robust, event planning website. Eventi. has been developed as a display of the skills learned by the group, with goals of creating a fluid event planning website to be used by individuals looking to keep track of some of the events
+                    in their lives; such as going out for dinner with a group of friends, noting the time and place of a family gathering, and scheduling meetings with fellow employees, just to name a few. We hope that you can find Eventi. useful in some
                     way, and that our time and effort that has been put into this project shows in our work.
                 </p>
             </div>
@@ -373,7 +352,12 @@
                 <div id="arrow-tst-right" class="tst-arrow"></div>
             </div>
 
+            <<<<<<< HEAD=======< div class="about-us-div">
+                <a href="#" id="about-us-trigger" class="modal-trigger" data-target="modal-aboutus">About Us</a>
         </div>
+
+        >>>>>>> f7c1f98fa59c32b462ec734ea23a29018a371ef9
+    </div>
     </div>
     <footer>
         <!--Footer Logo-->
