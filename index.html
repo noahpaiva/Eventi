@@ -324,15 +324,20 @@
             </div>
 
             <div id="welcome-info">
-                <p>
-                    Eventi. is a simple, yet robust, event planning website. Eventi. has been developed as a display of
-                    the skills learned by the group, with goals of creating a fluid event planning website to be used by
-                    individuals looking to keep track of some of the events
-                    in their lives; such as going out for dinner with a group of friends, noting the time and place of a
-                    family gathering, and scheduling meetings with fellow employees, just to name a few. We hope that
-                    you can find Eventi. useful in some
-                    way, and that our time and effort that has been put into this project shows in our work.
-                </p>
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="https://talvinsingh.com/wp-content/uploads/2020/09/UK.jpg">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">Eventi<i class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Eventi<i class="material-icons right">close</i></span>
+                      <p>Eventi is a simple, yet robust, event planning website. 
+                        Eventi allows for ease of access event planning.
+                        Try it out today!</p>
+                    </div>
+                  </div>
             </div>
 
             <div class="tst-wrap">
@@ -342,11 +347,9 @@
                         <div class="tst-content">
                             <div class="tst-content-info">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Aenean mollis dolor sit amet arcu tempus sodales.
-                                    Quisque et arcu enim. Maecenas non sodales nibh, nec ornare turpis.
+                                    I use Eventi everyday. I don't have to write things down on sticky notes anymore. Highly recommend this app for anyone  with a busy life, especially small business owners like myself!
                                     <br />
-                                    - Jane from Booklyn
+                                    - Jane: Bagel Store Owner
                                 </p>
                             </div>
                         </div>
@@ -355,11 +358,9 @@
                         <div class="tst-content">
                             <div class="tst-content-info">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Aenean mollis dolor sit amet arcu tempus sodales.
-                                    Quisque et arcu enim. Maecenas non sodales nibh, nec ornare turpis.
+                                    Eventi is perfect for young workers and students, but especially even for a business owner like myself. Event planning has never been easier. With the click of a button you now have events at your fingertips.
                                     <br />
-                                    - Robert from RealGoodCompany LLC.
+                                    - Michael: CEO
                                 </p>
                             </div>
                         </div>
@@ -368,11 +369,9 @@
                         <div class="tst-content">
                             <div class="tst-content-info">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Aenean mollis dolor sit amet arcu tempus sodales.
-                                    Quisque et arcu enim. Maecenas non sodales nibh, nec ornare turpis.
+                                    Eventi has made my life so much easier. Everyday personal event planning has been taking to a whole new level. I highly recommend this application!
                                     <br />
-                                    - Andrew from Chicago
+                                    - Alex: Student at Monmouth
                                 </p>
                             </div>
                         </div>
@@ -383,6 +382,11 @@
 
             <div class="about-us-div">
                 <a href="#" id="about-us-trigger" class="modal-trigger" data-target="modal-aboutus">About Us</a>
+                <div class="row">
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                  </div>
             </div>
         </div>
         <div class="about-section">
@@ -435,11 +439,27 @@
     </div>
     <footer>
         <!--Footer Logo-->
-        <div id="FooterLogo">
+          <div id="FooterLogo">
             <img src="img/EvenTI-logos_white.png" width="200" height="240">
         </div>
         <div id="footer-text">
             <p>&copy;Copyright 2021 EvenTI</p>
+        </div>
+        <div id="modal-contact" class="modal">
+            <div class="modal-content">
+                <h4>Contact</h4><br />
+                <form id="contact-us">
+                    <div class="input-field">
+                        <input type="name" id="name" required />
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="subject" id="subject" requried />
+                        <label for="subject">Subject:</label>
+                    </div>
+                    <button class="btn grey darken-3 z-depth-0">Contact</button>
+                </form>
+            </div>
         </div>
     </footer>
 
