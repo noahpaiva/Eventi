@@ -610,6 +610,7 @@ footer {
   .tst-content-info p {
     margin: 10px;
     color: white;
+    font-style: tahoma;
     font-size: 16px;
   }
 }
@@ -624,4 +625,7 @@ footer {
     width: 70%;
     margin-left: 15%;
   }
+}
+* {
+  box-sizing: border-box;
 }
