@@ -621,11 +621,13 @@ footer {
     width: 80%;
     margin-left: 10%;
   }
-  #welcome-info {
-    width: 70%;
-    margin-left: 15%;
-  }
 }
 * {
   box-sizing: border-box;
 }
+.card{
+  size: 30px;
+  width: 500px;
+  font-size: large;
+}
+
