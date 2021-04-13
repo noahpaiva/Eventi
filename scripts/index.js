@@ -54,6 +54,7 @@ const accountDetails = document.querySelector('.account-details');
 
 
 // Changes nav bar buttons depending on log in status
+// Contributed by: Noah Paiva
 const setupUI = (user) => {
 
     if (user) {
@@ -108,6 +109,7 @@ auth.onAuthStateChanged(user => {
 
 
 // Allows user to delete events, no confirmation is offered to user, might add in the future
+// Contributed by: Noah Paiva
 function deleteEvent(ev) {
     $('#calendar').evoCalendar('removeCalendarEvent', ev);
     db.collection('events').doc(ev).delete();
@@ -118,6 +120,7 @@ var currentEventID;
 
 
 // Sets contents of edit event modal
+// Contributed by: Noah Paiva
 function getEvent(ev) {
 
     // Sets global var currentEventID to event Id to use when update event button is pressed
@@ -150,6 +153,7 @@ function getEvent(ev) {
 
 
 // Allows for users to edit their events
+// Contributed by: Noah Paiva
 const editForm = document.querySelector('#edit-form');
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -195,7 +199,8 @@ function send_verification() {
 
 
 
-//setup events
+// Setup events
+// Contributed by: Noah Paiva
 const setupEvents = (data) => {
 
     // Checks if data exists for an event

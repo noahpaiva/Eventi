@@ -20,7 +20,7 @@ auth.onAuthStateChanged(user => {
         console.log('user logged out');
         setupUI();
         setupEvents([]);
-        
+
     }
 
 });
@@ -28,7 +28,8 @@ auth.onAuthStateChanged(user => {
 
 
 
-//Event Creation
+// Event Creation
+// Contributed by: Noah Paiva
 const createForm = document.querySelector('#create-form');
 createForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -55,11 +56,12 @@ createForm.addEventListener('submit', (e) => {
 
 
 
-// signup
+// Sign Up
+// Contributed by: Noah Paiva
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     //get user info
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
@@ -77,7 +79,8 @@ signupForm.addEventListener('submit', (e) => {
 })
 
 
-
+// Logout
+// Contributed by: Noah Paiva
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
