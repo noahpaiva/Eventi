@@ -76,15 +76,15 @@
             <h4>Sign up</h4><br />
             <form id="signup-form">
                 <div class="input-field">
-                    <input type="email" id="signup-email" required />
+                    <input type="email" id="signup-email" maxlength="35" required />
                     <label for="signup-email">Email address</label>
                 </div>
                 <div class="input-field">
-                    <input type="password" id="signup-password" requried />
+                    <input type="password" id="signup-password" maxlength="40" requried />
                     <label for="signup-password">Choose password</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" id="signup-bio" required />
+                    <input type="text" id="signup-bio" maxlength="120" required />
                     <label for="signup-bio">Your bio</label>
                 </div>
                 <button class="btn grey darken-3 z-depth-0">Sign up</button>
@@ -149,7 +149,7 @@
                     </span>
                 </div>
                 <div class="grid-item">
-                    <img src="img/user.png" alt="dev photo">
+                    <img src="img/hollyPic.jpg" alt="dev photo">
                     <br />
                     <span id="about-name">
                         Holly Bernich
@@ -171,7 +171,7 @@
             <h4>Create New Event</h4><br />
             <form id="create-form">
                 <div class="input-field">
-                    <input type="text" id="Title" requried>
+                    <input type="text" id="Title" maxlength="60" requried>
                     <label for="title">Event Title</label>
                 </div>
                 <div class="input-field col s12">
@@ -187,7 +187,7 @@
                     <!-- <label>Materialize Select</label> -->
                 </div>
                 <div class="input-field">
-                    <textarea id="Desc" class="materialize-textarea" required></textarea>
+                    <textarea id="Desc" class="materialize-textarea" maxlength="100" required></textarea>
                     <label for="content">Event Description</label>
                 </div>
                 <div class="input-field">
