@@ -33,6 +33,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Sign Up Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-signup {
     background-color: #98878f;
@@ -91,6 +92,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Create Event Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-create {
     background-color: #98878f;
@@ -110,12 +112,8 @@ font-family: 'Exo 2', sans-serif;
 /* ----- End Create Event Modal ----- */
 
 
-/* ----- HTML Event Container -----*/
-
-#event-container {}
-
-
 /* ----- Event Content CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #event-title {
     font-family: "Exo 2", sans-serif;
@@ -139,6 +137,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Edit Event Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-edit {
     background-color: #98878f;
@@ -255,6 +254,7 @@ body,
 
 
 /* ----- Testimonials ----- */
+/* Contributed by: Noah Paiva */
 
 #testimonials,
 .tst-wrap,
@@ -557,7 +557,6 @@ footer {
 .card {
     border-radius: 15px;
 }
-
 .card-image {
     height: 25%;
 }
