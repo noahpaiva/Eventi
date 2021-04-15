@@ -312,6 +312,7 @@ body,
 .tst-content-info p {
     margin: 10px;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
@@ -545,19 +546,39 @@ footer {
 }
 
 #welcome-info {
+    background-color: #192231;
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
 
 .card {
-    width: 400px;
-    height: 300px;
-    padding-bottom: 10px;
     border-radius: 15px;
+    background-color:#192231;
+    font-style: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-image {
+    height: 25%;
 }
 .card div {
-    width: 400px;
-    height: 300px;
-    padding-bottom: 10px;
     border-radius: 15px;
+}
+.card-content{
+    background-color:#192231;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-reveal{
+    background-color:#192231 !important;
+    font-size: 50px;
+    color: white !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 80%;
 }
 
 .about-us-div {
@@ -602,7 +623,7 @@ footer {
 }
 #about-name {
     font-family: "Exo 2", sans-serif;
-    font-size: 24px
+    font-size: 24px;
 }
 #about-content {
     text-align: justify;
@@ -689,7 +710,6 @@ footer {
     .tst-content-info p {
         margin: 10px;
         color: white;
-        font-style: tahoma;
         font-size: 13px;
         
     }
