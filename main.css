@@ -33,6 +33,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Sign Up Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-signup {
     background-color: #98878f;
@@ -91,6 +92,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Create Event Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-create {
     background-color: #98878f;
@@ -110,12 +112,8 @@ font-family: 'Exo 2', sans-serif;
 /* ----- End Create Event Modal ----- */
 
 
-/* ----- HTML Event Container -----*/
-
-#event-container {}
-
-
 /* ----- Event Content CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #event-title {
     font-family: "Exo 2", sans-serif;
@@ -139,6 +137,7 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Edit Event Modal CSS ----- */
+/* Contributed by: Noah Paiva */
 
 #modal-edit {
     background-color: #98878f;
@@ -255,6 +254,7 @@ body,
 
 
 /* ----- Testimonials ----- */
+/* Contributed by: Noah Paiva */
 
 #testimonials,
 .tst-wrap,
@@ -312,7 +312,6 @@ body,
 .tst-content-info p {
     margin: 10px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
@@ -353,7 +352,7 @@ body {
 main {
     flex: 1 0 auto;
 }
-
+/*---contributed by Holly Bernich---*/
 footer {
     background-color: #192231;
     font-family: "Exo 2", sans-serif;
@@ -362,18 +361,18 @@ footer {
     bottom: 0;
     margin-top: 40vh;
 }
-
+/*---contributed by Holly Bernich---*/
 #footer-text {
     width: 30%;
     float: left;
     margin-left: 5%;
 }
-
+/*---contributed by Holly Bernich---*/
 #footer-devs {
     width: 30%;
     float: right;
 }
-
+/*---contributed by Holly Bernich---*/
 #footer-text p,
 #footer-devs p,
 #footer-devs ul li {
@@ -527,7 +526,7 @@ footer {
 
 
 /* ----- Welcome Content -----  */
-
+/*---contributed by Holly Bernich---*/
 #welcome-title {
     background-color: #494e6b;
     width: 35%;
@@ -536,7 +535,7 @@ footer {
     border-radius: 15px;
     box-shadow: 10px 10px 5px rgb(65, 65, 65);
 }
-
+/*---contributed by Holly Bernich---*/
 #welcome-title h2 {
     padding-top: 14px;
     padding-bottom: 14px;
@@ -546,7 +545,7 @@ footer {
 }
 
 #welcome-info {
-    background-color: #192231;
+    background-color: #494e6b;
     width: 70%;
     margin-top: 5%;
     margin-left: 15%;
@@ -557,28 +556,12 @@ footer {
 
 .card {
     border-radius: 15px;
-    background-color:#192231;
-    font-style: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .card-image {
     height: 25%;
 }
 .card div {
     border-radius: 15px;
-}
-.card-content{
-    background-color:#192231;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.card-reveal{
-    background-color:#192231 !important;
-    font-size: 50px;
-    color: white !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    opacity: 80%;
 }
 
 .about-us-div {
@@ -694,6 +677,7 @@ footer {
         font-size: 2rem;
         color: #fff;
     }
+    /*---contributed by Holly Bernich---*/
     /* ----- Testimonial Details ----- */
     .tst-wrap,
     .tst-content {
@@ -710,11 +694,13 @@ footer {
     .tst-content-info p {
         margin: 10px;
         color: white;
+        font-style: tahoma;
         font-size: 13px;
         
     }
     
 }
+/*---contributed by Holly Bernich---*/
 
 @media all and (max-width: 810px) {
     /* ----- Logged Out Items ----- */
