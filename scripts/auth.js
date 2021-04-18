@@ -66,7 +66,8 @@ signupForm.addEventListener('submit', (e) => {
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
 
-    // sign up user, asynchronous task, takes time to complete, requires promise to function correctly
+    // sign up user, asynchronous task, takes time to complete, 
+    // requires promise to function correctly
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         return db.collection('users').doc(cred.user.uid).set({
             bio: signupForm['signup-bio'].value
@@ -87,7 +88,7 @@ logout.addEventListener('click', (e) => {
     auth.signOut();
 });
 
-
+// Login
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
