@@ -558,9 +558,9 @@ footer {
 
 .card {
     border-radius: 15px;
-    background-color: #192231;
+    background-color: #192231 !important;
     color: white;
-    font-family: "Catamaran", sans-serif;
+    font-family: "Catamaran", sans-serif !important;
 }
 .card-image {
     height: 25%;
@@ -573,7 +573,7 @@ footer {
     color: white;
     font-size: 65px;
     opacity: 75%;
-    font-family: "Catamaran", sans-serif;
+    font-family: "Catamaran", sans-serif !important;
 }
 
 .about-us-div {
