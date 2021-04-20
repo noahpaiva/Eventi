@@ -13,6 +13,9 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Nav Bar CSS ----- */
 
+
+/* Contributed by: Veronica Marquez */
+
 #nav-mobile {
     float: right;
     display: flex;
@@ -33,6 +36,8 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Sign Up Modal CSS ----- */
+
+
 /* Contributed by: Noah Paiva */
 
 #modal-signup {
@@ -55,6 +60,9 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Login Modal CSS ----- */
 
+
+/* Contributed by: Veronica Marquez */
+
 #modal-login {
     background-color: #98878f;
 }
@@ -75,6 +83,9 @@ font-family: 'Exo 2', sans-serif;
 
 /* ----- Account Info Modal CSS ----- */
 
+
+/* Contributed by: Veronica Marquez */
+
 #modal-account {
     background-color: #98878f;
 }
@@ -92,6 +103,8 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Create Event Modal CSS ----- */
+
+
 /* Contributed by: Noah Paiva */
 
 #modal-create {
@@ -113,6 +126,8 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Event Content CSS ----- */
+
+
 /* Contributed by: Noah Paiva */
 
 #event-title {
@@ -137,6 +152,8 @@ font-family: 'Exo 2', sans-serif;
 
 
 /* ----- Edit Event Modal CSS ----- */
+
+
 /* Contributed by: Noah Paiva */
 
 #modal-edit {
@@ -254,6 +271,8 @@ body,
 
 
 /* ----- Testimonials ----- */
+
+
 /* Contributed by: Noah Paiva */
 
 #testimonials,
@@ -342,7 +361,10 @@ body,
 }
 
 
-/* ----- footer edits ----- */
+/* ----- Footer edits ----- */
+
+
+/* Contributed by: Veronica Marquez */
 
 body {
     display: flex;
@@ -386,6 +408,9 @@ footer {
 
 
 /* ----- Account Info ----- */
+
+
+/* Contributed by: Veronica Marquez */
 
 #account-info-left {
     width: 45%;
@@ -558,14 +583,17 @@ footer {
     color: white;
     font-family: "Catamaran", sans-serif !important;
 }
+
 .card-image {
     height: 25%;
 }
+
 .card div {
     border-radius: 15px;
 }
-.card-reveal{
-    background-color:#192231 !important;
+
+.card-reveal {
+    background-color: #192231 !important;
     color: white;
     font-size: 65px;
     opacity: 75%;
@@ -587,35 +615,42 @@ footer {
     font-size: 42px;
     font-family: "Exo 2", sans-serif;
 }
+
 #modal-aboutus {
     background-color: #98878f;
     max-height: 100% !important;
 }
+
 .about-grid-container {
     display: grid;
     grid-column-gap: 2%;
     grid-template-columns: auto auto auto;
     padding: 10px;
 }
+
 .grid-item {
     width: 100%;
     text-align: center;
 }
+
 .grid-item img {
     margin-top: 5px;
     text-align: center;
     width: 100%;
     border-radius: 150px;
 }
+
 #about-head {
     text-align: center;
     font-family: "Exo 2", sans-serif;
     font-size: 50px
 }
+
 #about-name {
     font-family: "Exo 2", sans-serif;
     font-size: 24px;
 }
+
 #about-content {
     text-align: justify;
     margin-bottom: 30px;
@@ -665,6 +700,7 @@ footer {
         float: none;
     }
     /* ----- Logged Out Items ----- */
+    /* Contributed by: Veronica Marquez */
     #welcome-title {
         width: 90%;
         margin-left: 5%;
@@ -690,7 +726,6 @@ footer {
     .tst-content {
         height: 40vh;
     }
-
     .tst-content-info {
         width: 90%;
         /* height: 40%; */
@@ -703,13 +738,12 @@ footer {
         color: white;
         font-style: tahoma;
         font-size: 13px;
-        
     }
-    
 }
 
 @media all and (max-width: 810px) {
     /* ----- Logged Out Items ----- */
+    /* Contributed by: Veronica Marquez */
     #welcome-title {
         width: 80%;
         margin-left: 10%;
@@ -728,4 +762,3 @@ footer {
 * {
     box-sizing: border-box;
 }
-
