@@ -76,6 +76,8 @@ signupForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-signup');
         M.Modal.getInstance(modal).close();
         signupForm.reset();
+    }).catch(err => {
+        window.alert(err.message);
     });
 })
 
@@ -89,6 +91,7 @@ logout.addEventListener('click', (e) => {
 });
 
 // Login
+// Contributed By: Veronica Marquez
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -101,5 +104,7 @@ loginForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-login');
         M.Modal.getInstance(modal).close();
         loginForm.reset();
+    }).catch(err => {
+        window.alert(err.message);
     });
 });

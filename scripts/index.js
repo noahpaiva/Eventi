@@ -47,6 +47,7 @@ const eventList = document.querySelector('.events');
 
 
 // Finds which nav bar items should be shown to the user depending on log in status
+// Contributed By: Holly Bernich
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
@@ -59,6 +60,7 @@ const setupUI = (user) => {
 
     if (user) {
         // Show Account info
+        // Contributed By: Veronica Marquez
         db.collection('users').doc(user.uid).get().then(doc => {
             const html = `
             <div id="account-info-left">
@@ -76,6 +78,7 @@ const setupUI = (user) => {
             accountDetails.innerHTML = html;
         })
         // Toggle nav bar elements
+        // Contributed By: Holly Bernich
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display = 'none');
     }
@@ -84,6 +87,7 @@ const setupUI = (user) => {
         accountDetails.innerHTML = '';
 
         // Toggle nav bar elements
+        // Contributed By: Holly Bernich
         loggedInLinks.forEach(item => item.style.display = 'none');
         loggedOutLinks.forEach(item => item.style.display = 'block');
     }
