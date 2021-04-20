@@ -271,6 +271,7 @@ body,
     width: 80%;
     margin-left: 10%;
     border-radius: 15px;
+    overflow-y: hidden;
 }
 
 .tst {
@@ -313,6 +314,7 @@ body,
     margin: 10px;
     color: white;
     font-size: 20px;
+    font-family: "Catamaran", sans-serif;
 }
 
 .tst-arrow {
@@ -365,12 +367,7 @@ footer {
 #footer-text {
     width: 30%;
     float: left;
-    margin-left: 5%;
-}
-
-#footer-devs {
-    width: 30%;
-    float: right;
+    margin-left: 6%;
 }
 
 #footer-text p,
@@ -380,10 +377,11 @@ footer {
 }
 
 #FooterLogo {
-    display: inline-block;
+    /* display: inline-block; */
     width: none;
-    float: none;
     margin-left: 5px;
+    margin-right: 6%;
+    float: right;
 }
 
 
@@ -556,6 +554,9 @@ footer {
 
 .card {
     border-radius: 15px;
+    background-color: #192231 !important;
+    color: white;
+    font-family: "Catamaran", sans-serif !important;
 }
 .card-image {
     height: 25%;
@@ -563,9 +564,16 @@ footer {
 .card div {
     border-radius: 15px;
 }
+.card-reveal{
+    background-color:#192231 !important;
+    color: white;
+    font-size: 65px;
+    opacity: 75%;
+    font-family: "Catamaran", sans-serif !important;
+}
 
 .about-us-div {
-    margin-top: 4%;
+    margin-top: 10%;
     margin-left: 30%;
     padding: 3% 3%;
     background-color: #192231;
