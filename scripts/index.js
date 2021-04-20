@@ -65,7 +65,7 @@ const setupUI = (user) => {
             const html = `
             <div id="account-info-left">
                 <div id="account-img">
-                    <img src="../img/user.png">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/eventilogin.appspot.com/o/default_user.png?alt=media&token=48a6266e-f61f-4321-b5f4-ba3354725ceb">
                 </div>
             </div>
             <div id="account-info-right">
