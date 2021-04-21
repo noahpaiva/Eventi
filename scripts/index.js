@@ -112,7 +112,7 @@ auth.onAuthStateChanged(user => {
 
 
 
-// Allows user to delete events, no confirmation is offered to user, might add in the future
+// Allows user to delete events
 // Contributed by: Noah Paiva
 function deleteEvent(ev) {
     $('#calendar').evoCalendar('removeCalendarEvent', ev);
